@@ -12,8 +12,8 @@
         
         <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
         
-        <link rel="stylesheet" href="../css/icon-font.css">
-        <link rel="stylesheet" href="../css/style.css" type="text/css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}css/icon-font.css">
+        <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css" type="text/css">
         <link rel="shortcut icon" href="http://100tefl.com/images/favicon.ico" sizes="32x32" type="image/png" >
     </head>
     
@@ -21,7 +21,7 @@
         <header class="services-header">
             <nav class="row sticky__services">
                 <div class="col-1-of-4 header__logo-box">
-                    <a href="../index.html"><img src="../img/logo.png" alt="logo" class="header__logo-img"></a>
+                    <a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}img/logo.png" alt="logo" class="header__logo-img"></a>
                 </div>
                 
                 <ul class="col-3-of-4 header__main-nav">
@@ -131,7 +131,7 @@
         <!-- FOOTER -->
         <footer class="footer" id="footer">
             <div class="footer__logo-box">
-                <a href="../index.html"><img src="../img/logo.png" alt="Footer Logo" class="footer__logo"></a>
+                <a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}img/logo.png" alt="Footer Logo" class="footer__logo"></a>
             </div>
             <div class="row">
                 <div class="col-1-of-2">
@@ -161,7 +161,7 @@
                         <ul class="footer__list">
                             <p>Add us</p>
                             
-                            <li class="footer__item"><a href="#" class="footer__link"><img src="../img/wechat_color.png" alt="wechat" class="follow-img"><span>ybws100tefl</span></a></li>
+                            <li class="footer__item"><a href="#" class="footer__link"><img src="{{env('APP_URL')}}img/wechat_color.png" alt="wechat" class="follow-img"><span>ybws100tefl</span></a></li>
                         </ul>
                     </div>
                 </div>

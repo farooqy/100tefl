@@ -22,7 +22,7 @@
 <!--            <div class="sticky__back"></div>-->
             <nav class="row">
                 <div class="col-1-of-4 header__logo-box">
-                    <a href=""><img src="img/logo.png" alt="logo" class="header__logo-img"></a>
+                    <a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}img/logo.png" alt="logo" class="header__logo-img"></a>
                 </div>
                 
                 <ul class="col-3-of-4 header__main-nav">
