@@ -14,7 +14,7 @@
         
         <link rel="stylesheet" href="{{env('APP_URL')}}css/icon-font.css">
         <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css" type="text/css">
-        <link rel="shortcut icon" href="http://100tefl.com/images/favicon.ico" sizes="32x32" type="image/png" >
+        <link rel="shortcut icon" href="https://100tefl.com/images/favicon.ico" sizes="32x32" type="image/png" >
     </head>
     
     <body>
