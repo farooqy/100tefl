@@ -18,7 +18,7 @@
     </head>
     
     <body>
-        <header class="services-header">
+        <header class="services-header" id="services-header">
             <nav class="row sticky__services">
                 <div class="col-1-of-4 header__logo-box">
                     <a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}img/logo.png" alt="logo" class="header__logo-img"></a>
@@ -27,9 +27,9 @@
                 <ul class="col-3-of-4 header__main-nav">
                     <li><a href="{{env('APP_URL')}}">Home</a></li>
                     <li><a href="{{env('APP_URL')}}#section_news">News</a></li>
-                    <li><a href="{{env('APP_URL')}}#section_services">Services</a></li>
+                    <li><a href="{{env('APP_URL')}}#section_services" style="border-bottom: .1rem solid #000;">Services</a></li>
                     <li><a href="{{env('APP_URL')}}#section_contact">Contact</a></li>
-                    <li><a href="{{env('APP_URL')}}#section_career-partners">Career Partner</a></li>
+                    <li><a href="{{env('APP_URL')}}careers">100tefl VIP</a></li>
                     <li><a href="{{env('APP_URL')}}about">About</a></li>
                 </ul>
             </nav>
@@ -104,7 +104,7 @@
                 <div class="row">
                     <div class="u-center-text u-margin-bottom-small">
                         <h2 class="heading-secondary">
-                             &#45; Who we work with
+                             Who we work with
                         </h2>
                     </div>
                 </div>
@@ -129,39 +129,39 @@
         </main>
         
         <!-- FOOTER -->
-        <footer class="footer" id="footer">
+        <footer class="footer" id="services_footer">
             <div class="footer__logo-box">
                 <a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}img/logo.png" alt="Footer Logo" class="footer__logo"></a>
             </div>
             <div class="row">
-                <div class="col-1-of-2">
+                <div class="col-1-of-2 footer-left">
                     <p class="footer__copyright">
                         <strong>100tefl</strong><br><br>
                         All rights reserved Copyright &copy; 2019 100tefl. All rights reserved
                     </p>
                 </div>
-                <div class="col-1-of-2">
+                <div class="col-1-of-2 footer-right">
                     <div class="footer__navigation">
                         <ul class="footer__list">
                             <p>Navigation</p>
                             
                             <li class="footer__item"><a href="{{env('APP_URL')}}" class="footer__link">Home</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}#section_services" class="footer__link">Services</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}#section_career-partners" class="footer__link">Career Partners</a></li>
                             <li class="footer__item"><a href="{{env('APP_URL')}}#section_news" class="footer__link">News</a></li>
+                            <li class="footer__item"><a href="{{env('APP_URL')}}#section_contact" class="footer__link">Contact</a></li>
+                            <li class="footer__item"><a href="{{env('APP_URL')}}careers" class="footer__link">100tefl VIP</a></li>
                             <li class="footer__item"><a href="{{env('APP_URL')}}about" class="footer__link">About</a></li>  
                             
                         </ul>
                         <ul class="footer__list">
                             <p>Contact Us</p>
                             
-                            <li class="footer__item"><a href="#" class="footer__link">service@100tefl.com</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">+86 189 9405 0515</a></li>
+                            <li class="footer__item"><a href="mailto:service@100tefl.com" class="footer__link">service@100tefl.com</a></li>
+                            <li class="footer__item"><a href="#services_footer" class="footer__link">+86 189 9405 0515</a></li>
                         </ul>
                         <ul class="footer__list">
                             <p>Add us</p>
                             
-                            <li class="footer__item"><a href="#" class="footer__link"><img src="{{env('APP_URL')}}img/wechat_color.png" alt="wechat" class="follow-img"><span>ybws100tefl</span></a></li>
+                            <li class="footer__item"><a href="#services_footer" class="footer__link"><img src="{{env('APP_URL')}}img/wechat_color.png" alt="wechat" class="follow-img"><span>ybws100tefl</span></a></li>
                         </ul>
                     </div>
                 </div>

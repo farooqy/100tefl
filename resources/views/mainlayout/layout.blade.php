@@ -14,25 +14,114 @@
         
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
-        <link rel="shortcut icon" href="https://100tefl.com/images/favicon.ico" sizes="32x32" type="image/png" >
+        <link rel="shortcut icon" href="https://100tefl.com/images/favicon.ico" sizes="32x32" type="image/png">
+        
+<!--        <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>-->
+        <script type="text/javascript" src="js/script.js"></script>
     </head>
     
     <body>
         <header class="header" id="header">
+<!--
+            <button class="hamburger" style="
+                                            background:none;
+                                            position:absolute;
+                                            top:0;
+                                            right:0;
+                                            line-height:45px;
+                                            padding:5px 15px 0px 15px;
+                                            color:#1C9DFC;
+                                            border:0;
+                                            font-size:1.4em;
+                                            font-weight:bold;
+                                            cursor:pointer;
+                                            outline:none;
+                                            z-index:10000000000000;">&#9776;</button>
+            <button class="cross" style="
+                                            background:none;
+                                            position:absolute;
+                                            top:0px;
+                                            right:0;
+                                            padding:7px 15px 0px 15px;
+                                            color:#1C9DFC;
+                                            border:0;
+                                            font-size:3em;
+                                            line-height:65px;
+                                            font-weight:bold;
+                                            cursor:pointer;
+                                            outline:none;
+                                            z-index:10000000000000;">&#735;</button>
+-->
 <!--            <div class="sticky__back"></div>-->
             <nav class="row">
                 <div class="col-1-of-4 header__logo-box">
-                    <a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}img/logo.png" alt="logo" class="header__logo-img"></a>
+                    <a href=""><img src="{{env('APP_URL')}}img/logo.png" alt="logo" class="header__logo-img"></a>
                 </div>
                 
-                <ul class="col-3-of-4 header__main-nav">
-                    <li><a href="">Home</a></li>
-                    <li><a href="#section_news">News</a></li>
-                    <li><a href="#section_services">Services</a></li>
-                    <li><a href="#section_contact">Contact</a></li>
-                    <li><a href="#section_career-partners">Career Partner</a></li>
-                    <li><a href="/about">About</a></li>
-                </ul>
+<!--
+                <div class="menu" style="
+                                        z-index: 1000000;
+                                        font-weight: bold;
+                                        font-size: 0.8rem;
+                                        width: 100%;
+                                        background: #f1f1f1;
+                                        position: absolute;
+                                        text-align: center;
+                                        font-size: 12px;
+                                        
+                                        .menu ul
+                                        {
+                                            margin: 0;
+                                            padding: 0;
+                                            list-style-type: none;
+                                            list-style-image: none;
+                                        }
+                                        .menu li
+                                        {
+                                            display: none;
+                                            padding: 15px 0 15px 0;
+                                            border-bottom: #dddddd 1px solid;
+                                        }
+                                        .menu li:hover 
+                                        {
+                                            display: block;
+                                            background: #ffffff;
+                                            padding: 15px 0 15px 0;
+                                            border-bottom: #dddddd 1px solid;
+                                        }
+                                        .menu ul li a
+                                        {
+                                            text-decoration: none;  
+                                            margin: 0px; 
+                                            color: #666;
+                                        }
+                                        .menu ul li a:hover
+                                        {
+                                            color: #666;
+                                            text-decoration: none;
+                                        }
+                                        .menu a
+                                        {
+                                            text-decoration: none;
+                                            color: #666;
+                                        }
+                                        .menu a:hover
+                                        {
+                                            text-decoration: none; 
+                                            color: #666;
+                                        }">
+-->
+                                        
+                    <ul class="col-3-of-4 header__main-nav">
+                        <li><a href="{{env('APP_URL')}}">Home</a></li>
+                        <li><a href="{{env('APP_URL')}}#section_news">News</a></li>
+                        <li><a href="{{env('APP_URL')}}services">Services</a></li>
+                        <li><a href="{{env('APP_URL')}}#section_contact">Contact</a></li>
+                        <li><a href="{{env('APP_URL')}}careers">100tefl VIP</a></li>
+                        <li><a href="{{env('APP_URL')}}about">About</a></li>
+                    </ul>
+                    
+<!--                </div>-->
             </nav>
             
             <div class="header__title-box">
@@ -41,13 +130,13 @@
                     <span class="heading-primary--sub">Your Dependable Career Partner</span>
                 </h1>
                 
-                <a href="#popup" class="btn btn--watch-intro">Watch our intro<img src="img/play@2x.png" alt="watch intro video" class="intro-play-img"></a>
+                <a href="#popup" class="btn btn--watch-intro hell">Watch our intro<img src="{{env('APP_URL')}}img/play@2x.png" alt="watch intro video" class="intro-play-img"></a>
             </div>
             
             <div class="popup" id="popup">
                 <div class="popup__video">
-                    <a href="#header" class="popup__close">&times;</a>
-                    <video src="vid/video_intro.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_poster_intro.jpg"></video>
+                    <a href="#header" class="popup__close" onClick="pauseVideo()">&times;</a>
+                    <video id="vid_intro" src="{{env('APP_URL')}}vid/video_intro.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_poster_intro.jpg"></video>
                 </div>
             </div>
         </header>
@@ -62,34 +151,34 @@
                 </div>
                 
                 <div class="row video">
-                    <div class="col-1-of-3">
+                    <div class="col-1-of-3 res-full">
                         <div class="video_small">
-                            <div class="video_small--1">
+                            <div class="video_small--1"> 
                                 <h4 class="video_small--title">生活在中国 &#45; Life In China</h4>
                                 
-                                <video src="vid/video_life-in-china.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_thumb_life-in-china.png"/>
+                                <video src="{{env('APP_URL')}}vid/video_life-in-china.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_thumb_life-in-china.png"/>
                             </div>
                             <div class="video_small--2">
                                 <h4 class="video_small--title">我们致力于实现更多目标 &#45; Our dedication to achieving more</h4>
                                 
-                                <video src="vid/video_life-in-china.mp4" controls="" type="video/mp4" width="100%" height="50%" poster="img/video_thumb_our-dedication.png"/>
+                                <video src="{{env('APP_URL')}}vid/video_life-in-china.mp4" controls="" type="video/mp4" width="100%" height="50%" poster="img/video_thumb_our-dedication.png"/>
                             </div>
                         </div>
                     </div>
-                    <div class="col-2-of-3">
+                    <div class="col-2-of-3 res-full">
                         <div class="video_big">
                             <div>
                                 <h2 class="video_big--title">外国人在中国南京的看法<br>Views of foreigners in Nanjing China</h2>
                             </div>
                             <div class="video_big--video">
-                                <video src="vid/video_foreigners_big.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_poster_big.jpg"></video>
+                                <video src="{{env('APP_URL')}}vid/video_foreigners_big.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_poster_big.jpg"></video>
                             </div>
-					    </div>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="row u-center-text">
-                    <a href="#" class="more_news">Read more latest news</a>
+                    <a href="#section_news" class="more_news">Read more latest news</a>
                 </div>
             </section>
             
@@ -102,32 +191,32 @@
                 </div>
                 
                 <div class="row">
-                    <div class="col-1-of-4">
+                    <div class="col-1-of-4 res-full">
                         <div class="services-box">
                             <i class="services-box__icon icon-basic-todo-txt"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">招聘<br>Recruitment</h3>
-                            <a href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
+                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
                         </div>
                     </div>
-                    <div class="col-1-of-4">
+                    <div class="col-1-of-4 res-full">
                         <div class="services-box">
                             <i class="services-box__icon icon-basic-signs"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">训练<br>Training</h3>
-                            <a href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
+                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
                         </div>
                     </div>
-                    <div class="col-1-of-4">
+                    <div class="col-1-of-4 res-full">
                         <div class="services-box">
                             <i class="services-box__icon icon-basic-link"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">咨询<br>Consulting</h3>
-                            <a href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
+                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
                         </div>
                     </div>
-                    <div class="col-1-of-4">
+                    <div class="col-1-of-4 res-full">
                         <div class="services-box">
                             <i class="services-box__icon icon-basic-world"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">工作签证<br>Work-Visa</h3>
-                            <a href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
+                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
                         </div>
                     </div>
                 </div>
@@ -138,7 +227,7 @@
                 <div class="row">
                     <div class="col-1-of-2">
                         <div class="map-margin">
-                            <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=31.944612000000006~118.80564300000002&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no"></iframe>
+                            <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=31.944612000000006~118.80564300000002&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no" class="map-frame"></iframe>
                             
                             <div class="map-text">
                                 <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=31.944612000000006~118.80564300000002&amp;sty=r&amp;lvl=16&amp;FORM=MBEDLD">View Larger Map</a>
@@ -147,9 +236,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-1-of-2 contact_form">
+                    <div class="col-1-of-2 contact_form  res-full">
                         <div class="row contact_form--box">
-                            <div class="u-margin-bottom-small">
+                            <div class="u-margin-bottom-small contact-us__center">
                                 <h2 class="heading-secondary">
                                     服务 &#45; Contact us
                                 </h2>
@@ -215,16 +304,16 @@
                 </div>
             </section>
             
-            <!-- CAREER PARTNERS SECTION -->
-            <section class="section-career-partners" id="section_career-partners">
+            <!-- 100TEFL VIP SECTION -->
+            <section class="section-100tefl-vip" id="section_100tefl-vip">
                 <div class="u-center-text u-margin-bottom-small">
                     <h2 class="heading-secondary">
-                        歪果仁 &#45; Career Partners
+                        100tefl VIP
                     </h2>
                 </div>
                 
                 <div class="row">
-                    <div class="col-1-of-4">
+                    <div class="col-1-of-4 res-full">
                         <a href="{{env('APP_URL')}}careers">
                             <div class="card">
                                 <div class="card__side card__side--front">
@@ -232,13 +321,13 @@
                                         &nbsp;
                                     </div>
                                     <h4 class="card__heading">
-                                        <span class="card__heading-span card__heading-span--1">Job Placement</span>
+                                        <span class="card__heading-span card__heading-span--1">Job</span>
                                     </h4>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-1-of-4">
+                    <div class="col-1-of-4 res-full">
                         <a href="{{env('APP_URL')}}careers">
                             <div class="card">
                                 <div class="card__side card__side--front">
@@ -246,13 +335,13 @@
                                         &nbsp;
                                     </div>
                                     <h4 class="card__heading">
-                                        <span class="card__heading-span card__heading-span--2">Job Training</span>
+                                        <span class="card__heading-span card__heading-span--2">Training</span>
                                     </h4>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-1-of-4">
+                    <div class="col-1-of-4 res-full">
                         <a href="{{env('APP_URL')}}careers">
                             <div class="card">
                                 <div class="card__side card__side--front">
@@ -260,13 +349,13 @@
                                         &nbsp;
                                     </div>
                                     <h4 class="card__heading">
-                                        <span class="card__heading-span card__heading-span--3">Joining Incubator</span>
+                                        <span class="card__heading-span card__heading-span--3">Entrepreneur</span>
                                     </h4>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-1-of-4">
+                    <div class="col-1-of-4 res-full">
                         <a href="{{env('APP_URL')}}careers">
                             <div class="card">
                                 <div class="card__side card__side--front">
@@ -274,7 +363,7 @@
                                         &nbsp;
                                     </div>
                                     <h4 class="card__heading">
-                                        <span class="card__heading-span card__heading-span--4">Big Community</span>
+                                        <span class="card__heading-span card__heading-span--4">Community</span>
                                     </h4>
                                 </div>
                             </div>
@@ -287,44 +376,41 @@
         <!-- FOOTER -->
         <footer class="footer" id="footer">
             <div class="footer__logo-box">
-                <a href=""><img src="img/logo.png" alt="Footer Logo" class="footer__logo"></a>
+                <a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}img/logo.png" alt="Footer Logo" class="footer__logo"></a>
             </div>
             <div class="row">
-                <div class="col-1-of-2">
+                <div class="col-1-of-2 footer-left">
                     <p class="footer__copyright">
                         <strong>100tefl</strong><br><br>
                         All rights reserved Copyright &copy; 2019 100tefl. All rights reserved
                     </p>
                 </div>
-                <div class="col-1-of-2">
+                <div class="col-1-of-2 footer-right">
                     <div class="footer__navigation">
                         <ul class="footer__list">
                             <p>Navigation</p>
                             
-                            <li class="footer__item"><a href="{{env('APP_URL')}}" class="footer__link">Home</a></li>
+                            <li class="footer__item"><a href="{{env('APP_URL')}}#header" class="footer__link">Home</a></li>
                             <li class="footer__item"><a href="{{env('APP_URL')}}#section_news" class="footer__link">News</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}#section_services" class="footer__link">Services</a></li>
+                            <li class="footer__item"><a href="{{env('APP_URL')}}services" class="footer__link">Services</a></li>
                             <li class="footer__item"><a href="{{env('APP_URL')}}#section_contact" class="footer__link">Contact</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}#section_career-partners" class="footer__link">Career Partners</a></li>
+                            <li class="footer__item"><a href="{{env('APP_URL')}}careers" class="footer__link">100tefl VIP</a></li>
                             <li class="footer__item"><a href="{{env('APP_URL')}}about" class="footer__link">About</a></li>  
                         </ul>
                         <ul class="footer__list">
                             <p>Contact Us</p>
                             
                             <li class="footer__item"><a href="mailto:service@100tefl.com" class="footer__link">service@100tefl.com</a></li>
-                            <li class="footer__item"><a href="" class="footer__link">+86 189 9405 0515</a></li>
+                            <li class="footer__item"><a href="#footer" class="footer__link">+86 189 9405 0515</a></li>
                         </ul>
                         <ul class="footer__list">
                             <p>Add us</p>
                             
-                            <li class="footer__item"><a href="#" class="footer__link"><img src="img/wechat_color.png" alt="wechat" class="follow-img"><span>ybws100tefl</span></a></li>
+                            <li class="footer__item"><a href="#footer" class="footer__link"><img src="{{env('APP_URL')}}img/wechat_color.png" alt="wechat" class="follow-img"><span>ybws100tefl</span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
-        
-        <script src="js/jquery.waypoints.min.js"></script>
-        <script src="js/script.js"></script>
     </body>
 </html>
