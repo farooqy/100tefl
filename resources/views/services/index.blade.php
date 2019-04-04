@@ -10,7 +10,7 @@
         
         <title>Services | 100TEFL</title>
         
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+        <link href="{{env('APP_URL')}}css/fonts_google.css?family=Lato:300,400,700" rel="stylesheet">
         
         <link rel="stylesheet" href="{{env('APP_URL')}}css/icon-font.css">
         <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css" type="text/css">
@@ -36,7 +36,7 @@
         </header>
         
         <main>
-            
+<!--
             <section class="section-services">
                 <div class="recruitment">
                     <div class="u-center-text u-margin-bottom-small u-margin-top-big">
@@ -99,7 +99,73 @@
                     </div>
                 </div>
             </section>
+-->
             
+            <div class="services_seciton_why-us">
+                <div class="u-center-text u-margin-bottom-small">
+                    <h2 class="heading-secondary">
+                        易佰外师能为您 &#45; Why choose 100tefl&#63;
+                    </h2>
+                </div>
+                
+                <div class="row center_vertical">
+                    <div class="col-1-of-4">
+                        <h2 class="service_numbers">1</h2>
+                    </div>
+                    <div class="col-3-of-4">
+                        <p>
+                            Provide foreign talent staff, verify teaching qualifications, and follow legal employment procedures;<br>
+                            提供外籍人才资源，甄别人才资质背景，合理、合法聘用外籍人才，规避法律风险；
+                        </p>
+                    </div>
+                </div>
+                <div class="row center_vertical">
+                    <div class="col-1-of-4">
+                        <h2 class="service_numbers">2</h2>
+                    </div>
+                    <div class="col-3-of-4">
+                        <p>
+                            Design remuneration plans and establish rules for handling the common problems of foreign talents after they join the company, improve management communication, and reduce resignation;<br>
+                            设计合理可行的薪酬方案，为外籍人才入职后的常见问题提前设定处理规范，提高管理沟通效率，减少意外离职的发生；
+                        </p>
+                    </div>
+                </div>
+                <div class="row center_vertical">
+                    <div class="col-1-of-4">
+                        <h2 class="service_numbers">3</h2>
+                    </div>
+                    <div class="col-3-of-4">
+                        <p>
+                            Guide in relocation of foreign talents coming to China for work, reducing economic losses caused by unreasonable/untimely work schedule arrangements or problems with entering the country;<br>
+                            指导合法申请外籍人才来华工作手续，避免因工签安排不合理/不及时导致的入职问题及经济损失；
+                        </p>
+                    </div>
+                </div>
+                <div class="row center_vertical">
+                    <div class="col-1-of-4">
+                        <h2 class="service_numbers">4</h2>
+                    </div>
+                    <div class="col-3-of-4">
+                        <p>
+                            Provide customized foreign talent recruitment management consulting training services to solve the bottleneck problem of foreign talent recruitment management in the process of large-scale development of employers.<br>
+                            提供定制化外籍人才招聘管理咨询培训服务，解决用人单位规模化发展过程中外籍人才招聘管理跟不上的瓶颈问题。
+                        </p>
+                    </div>
+                </div>
+                <div class="row center_vertical">
+                    <div class="col-1-of-4">
+                        <h2 class="service_numbers" style="text-align: center;">5</h2>
+                    </div>
+                    <div class="col-3-of-4">
+                        <p>
+                            Offer evaluative services for in-house recruitment systems and offer assistance in improving recruitment efficiency.<br>
+                            通过使用自有的招聘管理系统，信息一目了然，提高招聘效率。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+<!--
             <section class="section-partners">
                 <div class="row">
                     <div class="u-center-text u-margin-bottom-small">
@@ -126,6 +192,7 @@
                     </div>
                 </div>
             </section>
+-->
         </main>
         
         <!-- FOOTER -->

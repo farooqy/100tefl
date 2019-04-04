@@ -10,7 +10,7 @@
         
         <title>Career partners | 100TEFL</title>
         
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+        <link href="{{env('APP_URL')}}css/fonts_google.css?family=Lato:300,400,700" rel="stylesheet">
         
         <link rel="stylesheet" href="{{env('APP_URL')}}css/icon-font.css">
         <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css" type="text/css">

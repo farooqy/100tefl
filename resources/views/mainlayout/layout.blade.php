@@ -10,14 +10,11 @@
         
         <title>100TEFL</title>
         
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+        <link href="{{env('APP_URL')}}css/fonts_google.css?family=Lato:300,400,700" rel="stylesheet">
         
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="shortcut icon" href="https://100tefl.com/images/favicon.ico" sizes="32x32" type="image/png">
-        
-<!--        <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>-->
-        <script type="text/javascript" src="js/script.js"></script>
     </head>
     
     <body>
@@ -52,10 +49,10 @@
                                             outline:none;
                                             z-index:10000000000000;">&#735;</button>
 -->
-<!--            <div class="sticky__back"></div>-->
+            <div class="sticky__back" id="sticky__back"></div>
             <nav class="row">
                 <div class="col-1-of-4 header__logo-box">
-                    <a href=""><img src="{{env('APP_URL')}}img/logo.png" alt="logo" class="header__logo-img"></a>
+                    <a href="#header"><img src="{{env('APP_URL')}}img/logo.png" alt="logo" class="header__logo-img"></a>
                 </div>
                 
 <!--
@@ -136,7 +133,7 @@
             <div class="popup" id="popup">
                 <div class="popup__video">
                     <a href="#header" class="popup__close" onClick="pauseVideo()">&times;</a>
-                    <video id="vid_intro" src="{{env('APP_URL')}}vid/video_intro.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_poster_intro.jpg"></video>
+                    <video id="vid_intro" src="vid/video_intro.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_poster_intro.jpg"></video>
                 </div>
             </div>
         </header>
@@ -156,12 +153,12 @@
                             <div class="video_small--1"> 
                                 <h4 class="video_small--title">生活在中国 &#45; Life In China</h4>
                                 
-                                <video src="{{env('APP_URL')}}vid/video_life-in-china.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_thumb_life-in-china.png"/>
+                                <video src="vid/video_life-in-china.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_thumb_life-in-china.png"/>
                             </div>
                             <div class="video_small--2">
                                 <h4 class="video_small--title">我们致力于实现更多目标 &#45; Our dedication to achieving more</h4>
                                 
-                                <video src="{{env('APP_URL')}}vid/video_life-in-china.mp4" controls="" type="video/mp4" width="100%" height="50%" poster="img/video_thumb_our-dedication.png"/>
+                                <video src="vid/video_life-in-china.mp4" controls="" type="video/mp4" width="100%" height="50%" poster="img/video_thumb_our-dedication.png"/>
                             </div>
                         </div>
                     </div>
@@ -171,14 +168,14 @@
                                 <h2 class="video_big--title">外国人在中国南京的看法<br>Views of foreigners in Nanjing China</h2>
                             </div>
                             <div class="video_big--video">
-                                <video src="{{env('APP_URL')}}vid/video_foreigners_big.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_poster_big.jpg"></video>
+                                <video src="vid/video_foreigners_big.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_poster_big.jpg"></video>
                             </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="row u-center-text">
-                    <a href="#section_news" class="more_news">Read more latest news</a>
+                    <a href="{{env('APP_URL')}}#section_news" class="more_news">Read more latest news</a>
                 </div>
             </section>
             
@@ -195,28 +192,28 @@
                         <div class="services-box">
                             <i class="services-box__icon icon-basic-todo-txt"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">招聘<br>Recruitment</h3>
-                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
+                            <a class="btn--services" href="pages/services.html" class="services-box__text">细节</a>
                         </div>
                     </div>
                     <div class="col-1-of-4 res-full">
                         <div class="services-box">
                             <i class="services-box__icon icon-basic-signs"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">训练<br>Training</h3>
-                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
+                            <a class="btn--services" href="pages/services.html" class="services-box__text">细节</a>
                         </div>
                     </div>
                     <div class="col-1-of-4 res-full">
                         <div class="services-box">
                             <i class="services-box__icon icon-basic-link"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">咨询<br>Consulting</h3>
-                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
+                            <a class="btn--services" href="pages/services.html" class="services-box__text">细节</a>
                         </div>
                     </div>
                     <div class="col-1-of-4 res-full">
                         <div class="services-box">
                             <i class="services-box__icon icon-basic-world"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">工作签证<br>Work-Visa</h3>
-                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
+                            <a class="btn--services" href="pages/services.html" class="services-box__text">细节</a>
                         </div>
                     </div>
                 </div>
@@ -376,7 +373,7 @@
         <!-- FOOTER -->
         <footer class="footer" id="footer">
             <div class="footer__logo-box">
-                <a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}img/logo.png" alt="Footer Logo" class="footer__logo"></a>
+                <a href=""><img src="img/logo.png" alt="Footer Logo" class="footer__logo"></a>
             </div>
             <div class="row">
                 <div class="col-1-of-2 footer-left">
@@ -406,11 +403,15 @@
                         <ul class="footer__list">
                             <p>Add us</p>
                             
-                            <li class="footer__item"><a href="#footer" class="footer__link"><img src="{{env('APP_URL')}}img/wechat_color.png" alt="wechat" class="follow-img"><span>ybws100tefl</span></a></li>
+                            <li class="footer__item"><a href="#footer" class="footer__link"><img src="img/wechat_color.png" alt="wechat" class="follow-img"><span>ybws100tefl</span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </footer>
+        
+        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
