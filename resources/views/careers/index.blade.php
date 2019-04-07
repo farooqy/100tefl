@@ -18,20 +18,25 @@
     </head>
     
     <body>
-        <header class="services-header">
+        <header class="pages_header">
             <nav class="row sticky__services">
                 <div class="col-1-of-4 header__logo-box">
                     <a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}img/logo.png" alt="logo" class="header__logo-img"></a>
                 </div>
                 
-                <ul class="col-3-of-4 header__main-nav">
-                    <li><a href="{{env('APP_URL')}}">Home</a></li>
-                    <li><a href="{{env('APP_URL')}}#section_news">News</a></li>
-                    <li><a href="{{env('APP_URL')}}services">Services</a></li>
-                    <li><a href="{{env('APP_URL')}}#section_contact">Contact</a></li>
-                    <li><a href="{{env('APP_URL')}}#section_career-partners" style="border-bottom: .1rem solid #000;">100tefl VIP</a></li>
-                    <li><a href="{{env('APP_URL')}}about">About</a></li>
-                </ul>
+                <label for="toggle" class="label-black">&#9776;</label>
+                <input type="checkbox" id="toggle">
+                
+                <div class="col-3-of-4-drop-down menu">
+                    <ul class="pages_header__black-nav">
+                        <li><a href="{{env('APP_URL')}}" onClick="toggleDropdown()">Home</a></li>
+                        <li><a href="{{env('APP_URL')}}#section_news" onClick="toggleDropdown()">News</a></li>
+                        <li><a href="{{env('APP_URL')}}services" onClick="toggleDropdown()">Services</a></li>
+                        <li><a href="{{env('APP_URL')}}#section_contact" onClick="toggleDropdown()">Contact</a></li>
+                        <li><a href="{{env('APP_URL')}}#section_career-partners" style="border-bottom: .1rem solid #000;" onClick="toggleDropdown()">100tefl VIP</a></li>
+                        <li><a href="{{env('APP_URL')}}about" onClick="toggleDropdown()">About</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
         

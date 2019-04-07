@@ -306,15 +306,22 @@ body {
     color: #000000; }
 
 @media (max-width: 37.5em) {
+  .map-center {
+    width: 100%;
+    display: block;
+    margin: 0 auto !important;
+    text-align: center; } }
+
+@media (max-width: 37.5em) {
   .map-frame {
-    width: 37.5rem; } }
+    width: 100%;
+    margin: 0 auto !important; } }
 
 .map-margin {
   margin: 15rem auto 0 auto; }
   @media (max-width: 37.5em) {
     .map-margin {
-      margin: 0;
-      width: 10rem; } }
+      margin: 0; } }
 
 .map-text {
   width: 50rem;
@@ -407,7 +414,8 @@ textarea {
       width: 100% !important; } }
   @media (max-width: 37.5em) {
     .footer-right .footer__navigation {
-      margin: 0 2.5rem; } }
+      margin: 0 auto;
+      width: 100% !important; } }
   @media (max-width: 37.5em) {
     .footer-right .footer__navigation .footer__list {
       text-align: center;
@@ -481,6 +489,12 @@ textarea {
     @media (max-width: 37.5em) {
       .row .col-1-of-2-long {
         width: 52.5%; } }
+  .row .col-1-of-2-map {
+    width: calc((100% - 6rem) / 2); }
+    @media (max-width: 37.5em) {
+      .row .col-1-of-2-map {
+        width: 100%;
+        margin-right: 0 !important; } }
   .row .col-1-of-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-of-3 {
@@ -493,6 +507,11 @@ textarea {
     width: calc(2 * ((100% - 3 * 6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+  .row .col-3-of-4-drop-down {
+    width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+    @media (max-width: 37.5em) {
+      .row .col-3-of-4-drop-down {
+        width: 100%; } }
 
 .header {
   height: 100vh;
@@ -512,7 +531,8 @@ textarea {
     margin: 3rem 0 0 0; }
     @media (max-width: 37.5em) {
       .header__logo-box {
-        width: 100% !important;
+        width: 90% !important;
+        margin-right: 0 !important;
         display: block;
         text-align: center; } }
   .header__logo-img {
@@ -523,10 +543,26 @@ textarea {
     margin: 4rem 0 0 0; }
     @media (max-width: 37.5em) {
       .header__main-nav {
-        display: none; } }
+        text-align: center;
+        margin-top: -3.3rem;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        width: 100% !important;
+        background-image: url(../img/Union%201.png);
+        background-size: contain;
+        background-repeat: round;
+        position: fixed;
+        z-index: 999; } }
     .header__main-nav li {
       display: inline-block;
       margin-left: 4rem; }
+      @media (max-width: 37.5em) {
+        .header__main-nav li {
+          margin: 2rem auto;
+          display: block;
+          width: 100%;
+          padding: .5rem 0;
+          height: 100% !important; } }
       .header__main-nav li a:link,
       .header__main-nav li a:visited {
         color: #FFFFFF;
@@ -536,9 +572,19 @@ textarea {
         font-size: 90%;
         padding: .8rem 0;
         transition: border-bottom .2s; }
+        @media (max-width: 37.5em) {
+          .header__main-nav li a:link,
+          .header__main-nav li a:visited {
+            font-size: 75%;
+            color: #1C9DFC;
+            margin: 0 auto; } }
       .header__main-nav li a:hover,
       .header__main-nav li a:active {
         border-bottom: 0.1rem solid #FDFDFD; }
+        @media (max-width: 37.5em) {
+          .header__main-nav li a:hover,
+          .header__main-nav li a:active {
+            border-bottom: none; } }
   .header__title-box {
     cursor: default;
     position: absolute;
@@ -546,6 +592,27 @@ textarea {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+#toggle:checked + .menu {
+  display: block; }
+
+#toggle:checked + label {
+  display: none; }
+
+.label,
+#toggle {
+  display: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding-top: 4.3rem; }
+
+@media (max-width: 37.5em) {
+  .menu {
+    display: none; } }
+
+@media (max-width: 37.5em) {
+  .label {
+    display: block; } }
 
 .about_header {
   height: 100vh;
@@ -563,17 +630,42 @@ textarea {
   .about_header__logo-box {
     display: inline-block;
     margin: 3rem 0 0 0; }
+    @media (max-width: 37.5em) {
+      .about_header__logo-box {
+        width: 90% !important;
+        margin-right: 0 !important;
+        display: block;
+        text-align: center; } }
   .about_header__logo-img {
     height: 6rem; }
-  .about_header__main-nav {
+  .about_header__black-nav {
     text-align: right;
     list-style: none;
     margin: 4rem 0 0 0; }
-    .about_header__main-nav li {
+    @media (max-width: 37.5em) {
+      .about_header__black-nav {
+        text-align: center;
+        margin-top: -3.3rem;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        width: 100% !important;
+        background-image: url(../img/Union%201.png);
+        background-size: contain;
+        background-repeat: round;
+        position: fixed;
+        z-index: 999; } }
+    .about_header__black-nav li {
       display: inline-block;
       margin-left: 4rem; }
-      .about_header__main-nav li a:link,
-      .about_header__main-nav li a:visited {
+      @media (max-width: 37.5em) {
+        .about_header__black-nav li {
+          margin: 2rem auto;
+          display: block;
+          width: 100%;
+          padding: .5rem 0;
+          height: 100% !important; } }
+      .about_header__black-nav li a:link,
+      .about_header__black-nav li a:visited {
         color: #FFFFFF;
         text-decoration: none;
         text-transform: uppercase;
@@ -582,15 +674,138 @@ textarea {
         border-bottom: .2rem solid transparent;
         padding: .8rem 0;
         transition: border-bottom .2s; }
-      .about_header__main-nav li a:hover,
-      .about_header__main-nav li a:active {
+        @media (max-width: 37.5em) {
+          .about_header__black-nav li a:link,
+          .about_header__black-nav li a:visited {
+            font-size: 75%;
+            color: #1C9DFC;
+            margin: 0 auto; } }
+      .about_header__black-nav li a:hover,
+      .about_header__black-nav li a:active {
         border-bottom: 0.1rem solid #FDFDFD; }
+        @media (max-width: 37.5em) {
+          .about_header__black-nav li a:hover,
+          .about_header__black-nav li a:active {
+            border-bottom: none; } }
   .about_header__title-box {
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+#toggle:checked + .menu {
+  display: block; }
+
+#toggle:checked + label {
+  display: none; }
+
+.label,
+#toggle {
+  display: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding-top: 4.3rem; }
+
+@media (max-width: 37.5em) {
+  .menu {
+    display: none; } }
+
+@media (max-width: 37.5em) {
+  .label {
+    display: block; } }
+
+.pages_header {
+  /* LOGO */
+  /* NAVIGATION */
+  /* TITLE */ }
+  .pages_header__logo-box {
+    display: inline-block;
+    margin: 3rem 0 0 0; }
+    @media (max-width: 37.5em) {
+      .pages_header__logo-box {
+        width: 90% !important;
+        margin-right: 0 !important;
+        display: block;
+        text-align: center; } }
+  .pages_header__logo-img {
+    height: 6rem; }
+  .pages_header__black-nav {
+    text-align: right;
+    list-style: none;
+    margin: 4rem 0 0 0; }
+    @media (max-width: 37.5em) {
+      .pages_header__black-nav {
+        text-align: center;
+        margin-top: -3.3rem;
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+        width: 100% !important;
+        background-image: url(../img/Union%201.png);
+        background-size: contain;
+        background-repeat: round;
+        position: fixed;
+        z-index: 999; } }
+    .pages_header__black-nav li {
+      display: inline-block;
+      margin-left: 4rem; }
+      @media (max-width: 37.5em) {
+        .pages_header__black-nav li {
+          margin: 2rem auto;
+          display: block;
+          width: 100%;
+          padding: .5rem 0;
+          height: 100% !important; } }
+      .pages_header__black-nav li a:link,
+      .pages_header__black-nav li a:visited {
+        color: #FFFFFF;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        font-size: 90%;
+        border-bottom: .2rem solid transparent;
+        padding: .8rem 0;
+        transition: border-bottom .2s; }
+        @media (max-width: 37.5em) {
+          .pages_header__black-nav li a:link,
+          .pages_header__black-nav li a:visited {
+            font-size: 75%;
+            color: #1C9DFC;
+            margin: 0 auto; } }
+      .pages_header__black-nav li a:hover,
+      .pages_header__black-nav li a:active {
+        border-bottom: 0.1rem solid #FDFDFD; }
+        @media (max-width: 37.5em) {
+          .pages_header__black-nav li a:hover,
+          .pages_header__black-nav li a:active {
+            border-bottom: none; } }
+  .pages_header__title-box {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+#toggle:checked + .menu {
+  display: block; }
+
+#toggle:checked + label {
+  display: none; }
+
+.label-black,
+#toggle {
+  display: none;
+  color: #000000;
+  cursor: pointer;
+  padding-top: 4.3rem; }
+
+@media (max-width: 37.5em) {
+  .menu {
+    display: none; } }
+
+@media (max-width: 37.5em) {
+  .label-black {
+    display: block; } }
 
 .video {
   margin-bottom: 5rem; }
@@ -668,7 +883,7 @@ textarea {
     visibility: hidden;
     position: fixed;
     width: 100%;
-    height: 9rem;
+    height: 8rem;
     background-color: rgba(255, 255, 255, 0.99);
     box-shadow: 0 0.2rem 0.2rem rgba(76, 76, 76, 0.2);
     z-index: 9999; }
@@ -685,10 +900,11 @@ textarea {
     height: 4rem; }
   .sticky .header__logo-img {
     height: 4rem;
-    margin-top: .2rem; }
+    margin-top: -1rem; }
   .sticky .header__main-nav {
     text-align: right;
-    list-style: none; }
+    list-style: none;
+    margin: 3rem 0; }
     .sticky .header__main-nav li {
       display: inline-block;
       margin-left: 4rem; }
@@ -699,11 +915,11 @@ textarea {
         text-transform: uppercase;
         letter-spacing: .1rem;
         font-size: 90%;
-        padding: 2rem 0;
+        padding: 2rem 0 .8rem 0;
         transition: border-bottom .2s; }
       .sticky .header__main-nav li a:hover,
       .sticky .header__main-nav li a:active {
-        border-bottom: 0.2rem solid #FFAD00; }
+        border-bottom: 0.1rem solid #FFAD00; }
 
 .about-content {
   width: 75%;

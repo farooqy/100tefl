@@ -23,15 +23,20 @@
                 <div class="col-1-of-4 header__logo-box">
                     <a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}img/logo.png" alt="logo" class="header__logo-img"></a>
                 </div>
+                    
+                <label for="toggle" class="label">&#9776;</label>
+                <input type="checkbox" id="toggle">
                 
-                <ul class="col-3-of-4 header__main-nav">
-                    <li><a href="{{env('APP_URL')}}">Home</a></li>
-                    <li><a href="{{env('APP_URL')}}#section_news">News</a></li>
-                    <li><a href="{{env('APP_URL')}}services">Services</a></li>
-                    <li><a href="{{env('APP_URL')}}#section_contact">Contact</a></li>
-                    <li><a href="{{env('APP_URL')}}careers">100tefl VIP</a></li>
-                    <li><a href="" style="border-bottom: .1rem solid #fff;">About</a></li>
-                </ul>
+                <div class="col-3-of-4-drop-down menu">
+                    <ul class="about_header__black-nav">
+                        <li><a href="{{env('APP_URL')}}">Home</a></li>
+                        <li><a href="{{env('APP_URL')}}#section_news">News</a></li>
+                        <li><a href="{{env('APP_URL')}}services">Services</a></li>
+                        <li><a href="{{env('APP_URL')}}#section_contact">Contact</a></li>
+                        <li><a href="{{env('APP_URL')}}careers">100tefl VIP</a></li>
+                        <li><a href="" style="border-bottom: .1rem solid #fff;">About</a></li>
+                    </ul>
+                </div>
             </nav>
             
             <div class="header__title-box about-title">
