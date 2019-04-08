@@ -14,7 +14,7 @@
         
         <link rel="stylesheet" href="{{env('APP_URL')}}css/icon-font.css">
         <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css" type="text/css">
-        <link rel="shortcut icon" href="https://100tefl.com/images/favicon.ico" sizes="32x32" type="image/png" >
+        <link rel="shortcut icon" href="http://100tefl.com/images/favicon.ico" sizes="32x32" type="image/png" >
     </head>
     
     <body>
@@ -49,12 +49,10 @@
                             招聘 &#45; Recruitment
                         </h2>
                     </div>
-
                     <div class="row">
                         <div class="col-1-of-4">
                             <i class="services-box__icon icon-basic-todo-txt"></i>
                         </div>
-
                         <div class="col-3-of-4">
                             <p>
                                 We specialise in matching the right candidates to the right schools. We use careful selection to provide you with the best candidates so that you can concentrate on what you do best, teaching the brightest and youngest minds for a better tomorrow.
@@ -69,12 +67,10 @@
                             训练 &#45; Training
                         </h2>
                     </div>
-
                     <div class="row">
                         <div class="col-1-of-4">
                             <i class="services-box__icon icon-basic-signs"></i>
                         </div>
-
                         <div class="col-3-of-4">
                             <p>
                                 We specialise in matching the right candidates to the right schools. We use careful selection to provide you with the best candidates so that you can concentrate on what you do best, teaching the brightest and youngest minds for a better tomorrow.
@@ -89,12 +85,10 @@
                             咨询 &#45; Consulting
                         </h2>
                     </div>
-
                     <div class="row">
                         <div class="col-1-of-4">
                             <i class="services-box__icon icon-basic-link"></i>
                         </div>
-
                         <div class="col-3-of-4">
                             <p>
                                 We specialise in matching the right candidates to the right schools. We use careful selection to provide you with the best candidates so that you can concentrate on what you do best, teaching the brightest and youngest minds for a better tomorrow.

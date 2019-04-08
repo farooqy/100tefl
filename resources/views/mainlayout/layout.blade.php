@@ -19,106 +19,25 @@
     
     <body>
         <header class="header" id="header">
-<!--
-            <button class="hamburger" style="
-                                            background:none;
-                                            position:absolute;
-                                            top:0;
-                                            right:0;
-                                            line-height:45px;
-                                            padding:5px 15px 0px 15px;
-                                            color:#1C9DFC;
-                                            border:0;
-                                            font-size:1.4em;
-                                            font-weight:bold;
-                                            cursor:pointer;
-                                            outline:none;
-                                            z-index:10000000000000;">&#9776;</button>
-            <button class="cross" style="
-                                            background:none;
-                                            position:absolute;
-                                            top:0px;
-                                            right:0;
-                                            padding:7px 15px 0px 15px;
-                                            color:#1C9DFC;
-                                            border:0;
-                                            font-size:3em;
-                                            line-height:65px;
-                                            font-weight:bold;
-                                            cursor:pointer;
-                                            outline:none;
-                                            z-index:10000000000000;">&#735;</button>
--->
             <div class="sticky__back" id="sticky__back"></div>
             <nav class="row">
                 <div class="col-1-of-4 header__logo-box">
-                    <a href="#header"><img src="{{env('APP_URL')}}img/logo.png" alt="logo" class="header__logo-img"></a>
+                    <a href=""><img src="img/logo.png" alt="logo" class="header__logo-img"></a>
                 </div>
-                
-<!--
-                <div class="menu" style="
-                                        z-index: 1000000;
-                                        font-weight: bold;
-                                        font-size: 0.8rem;
-                                        width: 100%;
-                                        background: #f1f1f1;
-                                        position: absolute;
-                                        text-align: center;
-                                        font-size: 12px;
-                                        
-                                        .menu ul
-                                        {
-                                            margin: 0;
-                                            padding: 0;
-                                            list-style-type: none;
-                                            list-style-image: none;
-                                        }
-                                        .menu li
-                                        {
-                                            display: none;
-                                            padding: 15px 0 15px 0;
-                                            border-bottom: #dddddd 1px solid;
-                                        }
-                                        .menu li:hover 
-                                        {
-                                            display: block;
-                                            background: #ffffff;
-                                            padding: 15px 0 15px 0;
-                                            border-bottom: #dddddd 1px solid;
-                                        }
-                                        .menu ul li a
-                                        {
-                                            text-decoration: none;  
-                                            margin: 0px; 
-                                            color: #666;
-                                        }
-                                        .menu ul li a:hover
-                                        {
-                                            color: #666;
-                                            text-decoration: none;
-                                        }
-                                        .menu a
-                                        {
-                                            text-decoration: none;
-                                            color: #666;
-                                        }
-                                        .menu a:hover
-                                        {
-                                            text-decoration: none; 
-                                            color: #666;
-                                        }">
--->
-                                        
-                    <ul class="col-3-of-4 header__main-nav">
-                        <li><a href="{{env('APP_URL')}}">Home</a></li>
-                        <li><a href="{{env('APP_URL')}}#section_news">News</a></li>
-                        <li><a href="{{env('APP_URL')}}services">Services</a></li>
-                        <li><a href="{{env('APP_URL')}}#section_contact">Contact</a></li>
-                        <li><a href="{{env('APP_URL')}}careers">100tefl VIP</a></li>
-                        <li><a href="{{env('APP_URL')}}about">About</a></li>
-                    </ul>
                     
-<!--                </div>-->
+                <label for="toggle" class="label">&#9776;</label>
+                <input type="checkbox" id="toggle">
+                
+                <div class="col-3-of-4-drop-down menu">
+                    <ul class="header__main-nav">
+                        <li><a href="{{env('APP_URL')}}#header" onClick="toggleDropdown()">Home</a></li>
+                        <li><a href="{{env('APP_URL')}}#section_news" onClick="toggleDropdown()">News</a></li>
+                        <li><a href="{{env('APP_URL')}}services" onClick="toggleDropdown()">Services</a></li>
+                        <li><a href="{{env('APP_URL')}}#section_contact" onClick="toggleDropdown()">Contact</a></li>
+                        <li><a href="{{env('APP_URL')}}careers" onClick="toggleDropdown()">100tefl VIP</a></li>
+                        <li><a href="{{env('APP_URL')}}about" onClick="toggleDropdown()">About</a></li>
+                    </ul>
+                </div>
             </nav>
             
             <div class="header__title-box">
@@ -127,7 +46,7 @@
                     <span class="heading-primary--sub">Your Dependable Career Partner</span>
                 </h1>
                 
-                <a href="#popup" class="btn btn--watch-intro hell">Watch our intro<img src="{{env('APP_URL')}}img/play@2x.png" alt="watch intro video" class="intro-play-img"></a>
+                <a href="#popup" class="btn btn--watch-intro hell">Watch our intro<img src="img/play@2x.png" alt="watch intro video" class="intro-play-img"></a>
             </div>
             
             <div class="popup" id="popup">
@@ -175,7 +94,7 @@
                 </div>
                 
                 <div class="row u-center-text">
-                    <a href="{{env('APP_URL')}}#section_news" class="more_news">Read more latest news</a>
+                    <a href="#section_news" class="more_news">Read more latest news</a>
                 </div>
             </section>
             
@@ -192,28 +111,28 @@
                         <div class="services-box">
                             <i class="services-box__icon icon-basic-todo-txt"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">招聘<br>Recruitment</h3>
-                            <a class="btn--services" href="pages/services.html" class="services-box__text">细节</a>
+                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
                         </div>
                     </div>
                     <div class="col-1-of-4 res-full">
                         <div class="services-box">
                             <i class="services-box__icon icon-basic-signs"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">训练<br>Training</h3>
-                            <a class="btn--services" href="pages/services.html" class="services-box__text">细节</a>
+                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
                         </div>
                     </div>
                     <div class="col-1-of-4 res-full">
                         <div class="services-box">
                             <i class="services-box__icon icon-basic-link"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">咨询<br>Consulting</h3>
-                            <a class="btn--services" href="pages/services.html" class="services-box__text">细节</a>
+                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
                         </div>
                     </div>
                     <div class="col-1-of-4 res-full">
                         <div class="services-box">
                             <i class="services-box__icon icon-basic-world"></i>
                             <h3 class="heading-tertiary u-margin-bottom-small">工作签证<br>Work-Visa</h3>
-                            <a class="btn--services" href="pages/services.html" class="services-box__text">细节</a>
+                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
                         </div>
                     </div>
                 </div>
@@ -222,9 +141,10 @@
             <!-- SERVICES SECTION -->
             <section class="section-contact" id="section_contact">
                 <div class="row">
-                    <div class="col-1-of-2">
+                    <div class="col-1-of-2-map">
                         <div class="map-margin">
-                            <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=31.944612000000006~118.80564300000002&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no" class="map-frame"></iframe>
+                            <div class="map-center">
+                                <iframe width="500" height="400" frameborder="0" src="https://www.bing.com/maps/embed?h=400&w=500&cp=31.944612000000006~118.80564300000002&lvl=16&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no" class="map-frame"></iframe></div>
                             
                             <div class="map-text">
                                 <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=31.944612000000006~118.80564300000002&amp;sty=r&amp;lvl=16&amp;FORM=MBEDLD">View Larger Map</a>
@@ -289,7 +209,7 @@
                                 </div> 
                                 <div class="row">
                                     <div class="col-1-of-2">
-                                        <label>&nbsp;</label>
+                                        <span>&nbsp;</span>
                                     </div>
                                     <div class="col-1-of-2">
                                         <input type="submit" value="Send Message">
@@ -387,7 +307,7 @@
                         <ul class="footer__list">
                             <p>Navigation</p>
                             
-                            <li class="footer__item"><a href="{{env('APP_URL')}}#header" class="footer__link">Home</a></li>
+                            <li class="footer__item"><a href="{{env('APP_URL')}}" class="footer__link">Home</a></li>
                             <li class="footer__item"><a href="{{env('APP_URL')}}#section_news" class="footer__link">News</a></li>
                             <li class="footer__item"><a href="{{env('APP_URL')}}services" class="footer__link">Services</a></li>
                             <li class="footer__item"><a href="{{env('APP_URL')}}#section_contact" class="footer__link">Contact</a></li>
@@ -410,8 +330,96 @@
             </div>
         </footer>
         
-        <script src="{{env('APP_URL')}}js/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<!--        <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>-->
+        <script src="js/jquery.js"></script>
         <script src="js/jquery.waypoints.min.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
+
+
+
+<!--
+            <button class="hamburger" style="
+                                            background:none;
+                                            position:absolute;
+                                            top:0;
+                                            right:0;
+                                            line-height:45px;
+                                            padding:5px 15px 0px 15px;
+                                            color:#1C9DFC;
+                                            border:0;
+                                            font-size:1.4em;
+                                            font-weight:bold;
+                                            cursor:pointer;
+                                            outline:none;
+                                            z-index:10000000000000;">&#9776;</button>
+            <button class="cross" style="
+                                            background:none;
+                                            position:absolute;
+                                            top:0px;
+                                            right:0;
+                                            padding:7px 15px 0px 15px;
+                                            color:#1C9DFC;
+                                            border:0;
+                                            font-size:3em;
+                                            line-height:65px;
+                                            font-weight:bold;
+                                            cursor:pointer;
+                                            outline:none;
+                                            z-index:10000000000000;">&#735;</button>
+-->
+                
+<!--
+                <div class="menu" style="
+                                        z-index: 1000000;
+                                        font-weight: bold;
+                                        font-size: 0.8rem;
+                                        width: 100%;
+                                        background: #f1f1f1;
+                                        position: absolute;
+                                        text-align: center;
+                                        font-size: 12px;
+                                        
+                                        .menu ul
+                                        {
+                                            margin: 0;
+                                            padding: 0;
+                                            list-style-type: none;
+                                            list-style-image: none;
+                                        }
+                                        .menu li
+                                        {
+                                            display: none;
+                                            padding: 15px 0 15px 0;
+                                            border-bottom: #dddddd 1px solid;
+                                        }
+                                        .menu li:hover 
+                                        {
+                                            display: block;
+                                            background: #ffffff;
+                                            padding: 15px 0 15px 0;
+                                            border-bottom: #dddddd 1px solid;
+                                        }
+                                        .menu ul li a
+                                        {
+                                            text-decoration: none;  
+                                            margin: 0px; 
+                                            color: #666;
+                                        }
+                                        .menu ul li a:hover
+                                        {
+                                            color: #666;
+                                            text-decoration: none;
+                                        }
+                                        .menu a
+                                        {
+                                            text-decoration: none;
+                                            color: #666;
+                                        }
+                                        .menu a:hover
+                                        {
+                                            text-decoration: none; 
+                                            color: #666;
+                                        }">
+-->
