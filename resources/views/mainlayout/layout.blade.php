@@ -22,7 +22,7 @@
             <div class="sticky__back" id="sticky__back"></div>
             <nav class="row">
                 <div class="col-1-of-4 header__logo-box">
-                    <a href=""><img src="img/logo.png" alt="logo" class="header__logo-img"></a>
+                    <a href="#header"><img src="img/logo.png" alt="logo" class="header__logo-img"></a>
                 </div>
                     
                 <label for="toggle" class="label">&#9776;</label>
@@ -106,33 +106,46 @@
                     </h2>
                 </div>
                 
-                <div class="row">
-                    <div class="col-1-of-4 res-full">
+                <div class="services-box--color_backgrounds">
+                    <div class="big-row">
+                        <div class="col-1-of-2 first-color-background"></div>
+                        <div class="col-1-of-2 second-color-background"></div>
+                    </div>
+                    <div class="big-row">
+                        <div class="col-1-of-2 third-color-background"></div>
+                        <div class="col-1-of-2 forth-color-background"></div>
+                    </div>
+                </div>
+                
+                <div class="big-row">
+                    <div class="col-1-of-2">
                         <div class="services-box">
-                            <i class="services-box__icon icon-basic-todo-txt"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">招聘<br>Recruitment</h3>
-                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
+                            <a href="services"><i class="services-box__icon icon-basic-todo-txt"></i></a>
+                            <h3 class="heading-tertiary-white u-margin-bottom-small">招聘<br>Recruitment</h3>
+                            <a class="btn--services services-box__text" href="services">细节</a>
                         </div>
                     </div>
-                    <div class="col-1-of-4 res-full">
+                    <div class="col-1-of-2">
                         <div class="services-box">
-                            <i class="services-box__icon icon-basic-signs"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">训练<br>Training</h3>
-                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
+                            <a href="services"><i class="services-box__icon icon-basic-signs"></i></a>
+                            <h3 class="heading-tertiary-white u-margin-bottom-small">训练<br>Training</h3>
+                            <a class="btn--services services-box__text" href="services">细节</a>
                         </div>
                     </div>
-                    <div class="col-1-of-4 res-full">
+                </div>
+                <div class="big-row">
+                    <div class="col-1-of-2">
                         <div class="services-box">
-                            <i class="services-box__icon icon-basic-link"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">咨询<br>Consulting</h3>
-                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
+                            <a href="services"><i class="services-box__icon icon-basic-link"></i></a>
+                            <h3 class="heading-tertiary-white u-margin-bottom-small">咨询<br>Consulting</h3>
+                            <a class="btn--services services-box__text" href="services">细节</a>
                         </div>
                     </div>
-                    <div class="col-1-of-4 res-full">
+                    <div class="col-1-of-2">
                         <div class="services-box">
-                            <i class="services-box__icon icon-basic-world"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">工作签证<br>Work-Visa</h3>
-                            <a class="btn--services" href="{{env('APP_URL')}}services" class="services-box__text">细节</a>
+                            <a href="services"><i class="services-box__icon icon-basic-world"></i></a>
+                            <h3 class="heading-tertiary-white u-margin-bottom-small">工作签证<br>Work-Visa</h3>
+                            <a class="btn--services services-box__text" href="services">细节</a>
                         </div>
                     </div>
                 </div>
@@ -231,7 +244,7 @@
                 
                 <div class="row">
                     <div class="col-1-of-4 res-full">
-                        <a href="{{env('APP_URL')}}careers">
+                        <a href="careers">
                             <div class="card">
                                 <div class="card__side card__side--front">
                                     <div class="card__picture card__picture--1">
@@ -245,7 +258,7 @@
                         </a>
                     </div>
                     <div class="col-1-of-4 res-full">
-                        <a href="{{env('APP_URL')}}careers">
+                        <a href="careers">
                             <div class="card">
                                 <div class="card__side card__side--front">
                                     <div class="card__picture card__picture--2">
@@ -259,7 +272,7 @@
                         </a>
                     </div>
                     <div class="col-1-of-4 res-full">
-                        <a href="{{env('APP_URL')}}careers">
+                        <a href="careers">
                             <div class="card">
                                 <div class="card__side card__side--front">
                                     <div class="card__picture card__picture--3">
@@ -273,7 +286,7 @@
                         </a>
                     </div>
                     <div class="col-1-of-4 res-full">
-                        <a href="{{env('APP_URL')}}careers">
+                        <a href="careers">
                             <div class="card">
                                 <div class="card__side card__side--front">
                                     <div class="card__picture card__picture--4">
@@ -307,12 +320,12 @@
                         <ul class="footer__list">
                             <p>Navigation</p>
                             
-                            <li class="footer__item"><a href="{{env('APP_URL')}}" class="footer__link">Home</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}#section_news" class="footer__link">News</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}services" class="footer__link">Services</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}#section_contact" class="footer__link">Contact</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}careers" class="footer__link">100tefl VIP</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}about" class="footer__link">About</a></li>  
+                            <li class="footer__item"><a href="#header" class="footer__link">Home</a></li>
+                            <li class="footer__item"><a href="#section_news" class="footer__link">News</a></li>
+                            <li class="footer__item"><a href="services" class="footer__link">Services</a></li>
+                            <li class="footer__item"><a href="#section_contact" class="footer__link">Contact</a></li>
+                            <li class="footer__item"><a href="careers" class="footer__link">100tefl VIP</a></li>
+                            <li class="footer__item"><a href="about" class="footer__link">About</a></li>  
                         </ul>
                         <ul class="footer__list">
                             <p>Contact Us</p>
