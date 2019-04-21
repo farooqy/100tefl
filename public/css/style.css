@@ -244,6 +244,18 @@ body {
     .card__heading-span--4 {
       background-image: linear-gradient(to right bottom, rgba(216, 89, 183, 0.85), rgba(255, 21, 194, 0.85));
       margin-left: -2rem; }
+  .card_login {
+    min-height: 40rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 40%;
+    padding: 5rem 10rem;
+    border-radius: .5rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card_login--front {
+      background-color: #FFFFFF; }
 
 .popup {
   height: 100vh;
@@ -329,7 +341,7 @@ body {
     color: #000000; }
 
 .first-color-background {
-  background-image: linear-gradient(to right, #FCFC86, #FCFC86);
+  background-image: linear-gradient(to right bottom, rgba(255, 173, 0, 0.6), rgba(28, 157, 252, 0.6)), url(../img/big_community.jpg);
   height: 50vh; }
   @media (max-width: 37.5em) {
     .first-color-background {
@@ -338,7 +350,7 @@ body {
       display: none; } }
 
 .second-color-background {
-  background-image: linear-gradient(to left, #90E889, #90E889);
+  background-image: linear-gradient(to right bottom, rgba(255, 173, 0, 0.6), rgba(28, 157, 252, 0.6)), url(../img/joining_incubator.jpg);
   height: 50vh; }
   @media (max-width: 37.5em) {
     .second-color-background {
@@ -347,7 +359,7 @@ body {
       display: none; } }
 
 .third-color-background {
-  background-image: linear-gradient(to right, #83AFE0, #83AFE0);
+  background-image: linear-gradient(to right bottom, rgba(255, 173, 0, 0.6), rgba(28, 157, 252, 0.99)), url(../img/job_placement.jpg);
   height: 50vh; }
   @media (max-width: 37.5em) {
     .third-color-background {
@@ -356,7 +368,7 @@ body {
       display: none; } }
 
 .forth-color-background {
-  background-image: linear-gradient(to left, #F49DD0, #F49DD0);
+  background-image: linear-gradient(to right bottom, rgba(255, 173, 0, 0.6), rgba(28, 157, 252, 0.6)), url(../img/job_training.jpg);
   height: 50vh; }
   @media (max-width: 37.5em) {
     .forth-color-background {
@@ -419,6 +431,7 @@ body {
 
 input[type=text],
 input[type=email],
+input[type=password],
 select,
 textarea {
   width: 100%;
@@ -437,6 +450,17 @@ input[type=submit] {
   color: #FFFFFF;
   margin-top: 1rem;
   border-radius: .5rem 0 0 .5rem;
+  border: none; }
+
+input[type=login] {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 1.2rem 2rem;
+  background-color: #0FED9B;
+  color: #FFFFFF;
+  margin-top: 5rem;
+  border-radius: .5rem;
+  text-align: center;
   border: none; }
 
 select {
@@ -1024,9 +1048,53 @@ textarea {
       padding: 0 2rem;
       width: 100%; } }
 
+.admin-box {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 300;
+  margin-top: 12rem; }
+  @media (max-width: 37.5em) {
+    .admin-box {
+      margin-top: 0;
+      margin-bottom: 5rem; } }
+  .admin-box--color_backgrounds {
+    height: 100vh;
+    width: 98.9vw;
+    position: absolute;
+    z-index: -1000; }
+    @media (max-width: 37.5em) {
+      .admin-box--color_backgrounds {
+        background-color: color-primary; } }
+  .admin-box__icon {
+    font-size: 6rem;
+    background-image: linear-gradient(to right, #FFAD00, #FFAD00);
+    display: inline-block;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-color: rgba(255, 173, 0, 0.8);
+    padding: 0rem 5rem;
+    border-radius: .3rem;
+    transition: transform .2s; }
+    .admin-box__icon:hover {
+      transform: translateY(-1.5rem) scale(1.03); }
+    @media (max-width: 37.5em) {
+      .admin-box__icon {
+        margin: 1rem auto;
+        background-image: linear-gradient(to right, #F8BC3B, #FF9300); } }
+  .admin-box a:link,
+  .admin-box a:visited {
+    cursor: pointer;
+    text-decoration: none;
+    color: #FFAD00; }
+  .admin-box .--card {
+    cursor: pointer; }
+
 .img_job__placement {
   width: 25rem;
   border-radius: .3rem; }
+  @media (max-width: 37.5em) {
+    .img_job__placement {
+      display: none; } }
 
 [class^="section-"] {
   margin: 0rem 0 5rem 0; }

@@ -24,3 +24,8 @@ Route::get('/services', function(){
 Route::get('/careers', function(){
 	return view('careers.index');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home/addpost', 'HomeController@newPost')->name('newPost');

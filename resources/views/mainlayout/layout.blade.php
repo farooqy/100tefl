@@ -10,7 +10,7 @@
         
         <title>100TEFL</title>
         
-        <link href="{{env('APP_URL')}}css/fonts_google.css?family=Lato:300,400,700" rel="stylesheet">
+        <link href="/css/fonts_google.css?family=Lato:300,400,700" rel="stylesheet">
         
         <link rel="stylesheet" href="css/icon-font.css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
@@ -30,12 +30,12 @@
                 
                 <div class="col-3-of-4-drop-down menu">
                     <ul class="header__main-nav">
-                        <li><a href="{{env('APP_URL')}}#header" onClick="toggleDropdown()">Home</a></li>
-                        <li><a href="{{env('APP_URL')}}#section_news" onClick="toggleDropdown()">News</a></li>
-                        <li><a href="{{env('APP_URL')}}services" onClick="toggleDropdown()">Services</a></li>
-                        <li><a href="{{env('APP_URL')}}#section_contact" onClick="toggleDropdown()">Contact</a></li>
-                        <li><a href="{{env('APP_URL')}}careers" onClick="toggleDropdown()">100tefl VIP</a></li>
-                        <li><a href="{{env('APP_URL')}}about" onClick="toggleDropdown()">About</a></li>
+                        <li><a href="#header" onClick="toggleDropdown()">Home</a></li>
+                        <li><a href="#section_news" onClick="toggleDropdown()">News</a></li>
+                        <li><a href="services" onClick="toggleDropdown()">Services</a></li>
+                        <li><a href="#section_contact" onClick="toggleDropdown()">Contact</a></li>
+                        <li><a href="careers" onClick="toggleDropdown()">100tefl VIP</a></li>
+                        <li><a href="about" onClick="toggleDropdown()">About</a></li>
                     </ul>
                 </div>
             </nav>
@@ -325,7 +325,8 @@
                             <li class="footer__item"><a href="services" class="footer__link">Services</a></li>
                             <li class="footer__item"><a href="#section_contact" class="footer__link">Contact</a></li>
                             <li class="footer__item"><a href="careers" class="footer__link">100tefl VIP</a></li>
-                            <li class="footer__item"><a href="about" class="footer__link">About</a></li>  
+                            <li class="footer__item"><a href="about" class="footer__link">About</a></li>
+                            <li class="footer__item"><a href="login" class="footer__link">Login</a></li>
                         </ul>
                         <ul class="footer__list">
                             <p>Contact Us</p>
@@ -349,90 +350,3 @@
         <script src="js/script.js"></script>
     </body>
 </html>
-
-
-
-<!--
-            <button class="hamburger" style="
-                                            background:none;
-                                            position:absolute;
-                                            top:0;
-                                            right:0;
-                                            line-height:45px;
-                                            padding:5px 15px 0px 15px;
-                                            color:#1C9DFC;
-                                            border:0;
-                                            font-size:1.4em;
-                                            font-weight:bold;
-                                            cursor:pointer;
-                                            outline:none;
-                                            z-index:10000000000000;">&#9776;</button>
-            <button class="cross" style="
-                                            background:none;
-                                            position:absolute;
-                                            top:0px;
-                                            right:0;
-                                            padding:7px 15px 0px 15px;
-                                            color:#1C9DFC;
-                                            border:0;
-                                            font-size:3em;
-                                            line-height:65px;
-                                            font-weight:bold;
-                                            cursor:pointer;
-                                            outline:none;
-                                            z-index:10000000000000;">&#735;</button>
--->
-                
-<!--
-                <div class="menu" style="
-                                        z-index: 1000000;
-                                        font-weight: bold;
-                                        font-size: 0.8rem;
-                                        width: 100%;
-                                        background: #f1f1f1;
-                                        position: absolute;
-                                        text-align: center;
-                                        font-size: 12px;
-                                        
-                                        .menu ul
-                                        {
-                                            margin: 0;
-                                            padding: 0;
-                                            list-style-type: none;
-                                            list-style-image: none;
-                                        }
-                                        .menu li
-                                        {
-                                            display: none;
-                                            padding: 15px 0 15px 0;
-                                            border-bottom: #dddddd 1px solid;
-                                        }
-                                        .menu li:hover 
-                                        {
-                                            display: block;
-                                            background: #ffffff;
-                                            padding: 15px 0 15px 0;
-                                            border-bottom: #dddddd 1px solid;
-                                        }
-                                        .menu ul li a
-                                        {
-                                            text-decoration: none;  
-                                            margin: 0px; 
-                                            color: #666;
-                                        }
-                                        .menu ul li a:hover
-                                        {
-                                            color: #666;
-                                            text-decoration: none;
-                                        }
-                                        .menu a
-                                        {
-                                            text-decoration: none;
-                                            color: #666;
-                                        }
-                                        .menu a:hover
-                                        {
-                                            text-decoration: none; 
-                                            color: #666;
-                                        }">
--->
