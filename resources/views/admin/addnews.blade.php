@@ -1,90 +1,114 @@
-@extends ("layouts.app")
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="x-ua-compatible" content="IE=9">
+        <meta name="author" content="Neud Tesfay Desta">
+        
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>Post | 100TEFL</title>
+        
+        <link href="/css/fonts_google.css?family=Lato:300,400,700" rel="stylesheet">
+        
+        <link rel="stylesheet" href="../css/icon-font.css" type="text/css">
+        <link rel="stylesheet" href="../css/style.css" type="text/css">
+        <link rel="shortcut icon" href="http://100tefl.com/images/favicon.ico" sizes="32x32" type="image/png">
+        
+        <link rel="stylesheet" href="/css/jodit.min.css">
+        <script src="/js/jquery-3.3.1.min.js"></script>
+        <script src="/js/jodit.min.js"></script>
+        <script src="/js/main.js"></script>
+        
+    </head>
+    
+    <body>
+        <header class="pages_header">
+            <nav class="row sticky__services">
+                <div class="col-1-of-4 header__logo-box">
+                    <a href="/"><img src="../img/logo.png" alt="logo" class="header__logo-img"></a>
+                </div>
+                
+                <label for="toggle" class="label-black">&#9776;</label>
+                <input type="checkbox" id="toggle">
+                
+                <div class="col-3-of-4-drop-down menu">
+                    <ul class="pages_header__black-nav">
+                        <li><a href="/" onClick="toggleDropdown()">Home</a></li>
+                        <li><a href="/#section_news" onClick="toggleDropdown()">News</a></li>
+                        <li><a href="/services" onClick="toggleDropdown()">Services</a></li>
+                        <li><a href="/#section_contact" onClick="toggleDropdown()">Contact</a></li>
+                        <li><a href="/#section_career-partners" onClick="toggleDropdown()">100tefl VIP</a></li>
+                        <li><a href="/about" onClick="toggleDropdown()">About</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+        	@if(session('success'))
+        	<div class="row">
+        		<strong style="color: green">News sucessfully added</strong>
+        	</div>
+        	@endif
+            <div class="row u-margin-top-huge u-margin-bottom-big">
+                <form method="post" action="{{route('newNews')}}" id="newNews" enctype="multipart/form-data">
+                	@csrf
+                	@if($errors->any())
+                	@foreach($errors->all() as $error)
+                	<div class="row">
+                		<strong style="color: red">{{$error}}</strong>
+                	</div>
+                	@endforeach
+                	@endif
+                    <div class="row">
+                        <label for="newsTitle">Add the title</label>
+                    </div>
+                    <div class="row u-margin-top-tiny">
+                        <input type="text" name="newsTitle" id="newsTitle" placeholder="Enter news Title" required value="{{old('newsTitle')}}">
+                    </div>
+                    <div class="row u-margin-top-tiny">
+                            <label for="newsFeatureImage">News feature Image/Video</label>
+                    </div>
+                    <div class="row u-margin-top-small u-margin-bottom-small">
+                        <input type="file" id="browse newsFeatureImage" name="newsFeatureImage"/>
+                    </div>
 
-
-@section ("pageTitle")
-
-News  | 100TEFL
-
-@endsection
-
-@section ("content")
-<div class="container">
-
-<script src="/js/jquery.js"></script>
-<link rel="stylesheet" href="{{env('APP_URL')}}css/jodit.min.css">
-
-<script src="{{env('APP_URL')}}js/jodit.min.js" type="text/javascript"></script>
-<script src="{{env('APP_URL')}}js/main.js" type="text/javascript"></script>
-	<div class="row" style="font-size: 14px">
-		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
-
-		
-		<form class="col-lg-6 col-md-6 col-sm-6 col-xs-6 formNews" enctype="multipart/form-data" name="newsForm" method="POST" action="save" >
-			@csrf
-
-			@if($errors->any())
-				<ul class="is-danger">
-					@foreach ($errors->all() as $err)
-						
-						<li> {{$err}} </li>
-						
-					@endforeach
-					
-				</ul>
-			@endif
-
-			@if($success = session('success'))
-				<ul class="is-success">
-					<li>
-						Successfully added news
-					</li>
-				</ul>
-			@endif
-			@if($flash = session('uploadFailed'))
-				<ul>
-					<li>
-						{{$flash}}
-					</li>
-				</ul>
-					
-			@endif
-			<div class="row">
-				<label for="newsTitle" class="label">Add the title</label>
-				<input type="text" name="newsTitle" placeholder="Enter news Title" value="{{old('newsTitle')}}" style="border:thin solid gray">
-			</div>
-			<div class="row">
-				<label for="newsFiles" class="label">News Feature Image/Video</label>
-				<input type="file" name="newsFeatureImage" >
-			</div>
-			<div class="row" >
-				<button class="btn btn-primary col-md-3 col-lg-4 insertImage">Insert File</button>
-				<span  class="col-md-9 col-lg-8 filePathHolder" style="min-height: 30px; border:thin solid gray;">Copy file url/path from here</span>
-			</div>
-			<div class="row">
-				<label for="newsTitle" class="label">Write the content</label>
-				<textarea type="text" name="newsContent" placeholder="Write the content" id="editor" rows="30">{{old('newsContent')}}</textarea>
-				{{-- <input type="hidden" value="{{old('newsContent')}}" name="newsContent" class="hiddenNewsContent"> --}}
-			</div>
-			{{-- <textarea id="editor" placeholder="Your news content" name="newsContent" rows="20"></textarea>  --}}
-			<div id="editor" ></div>
-			<div class="row" >
-				<label for="newsFiles" class="label">Other Images/Videos</label>
-				<input type="file" name="newsFiles[]" class="newsFiles" multiple>
-			</div>
-			<div class="row">
-				<input type="submit" name="submitNews" class="btn btn-primary submitNews" value="Write News">
-			</div>
-
-		</form>
-		<form action="/news/addFile" method="POST" id="addFileForm" name="addFileForm" enctype="multipart/form-data" style="display: none;">
-			@csrf
-			<input type="file" class="hide addFile" name="addFile" >
-			<input type="submit" class="hide submitAddFile" name="submitAddFile">
-		</form>
-		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
-	</div>
-</div>
-	
-
-<link rel="stylesheet" type="text/css" href="{{env('APP_URL').'css/newscss.css'}}">
-@endsection
+                    <div class="row u-margin-top-tiny" style="border: thin solid gray;">
+                            <label for="newsContent" class="col-md-4 col-lg-4 GenVideoCode" style="background-color: #0fed9b;padding: 10px; cursor: pointer;">Generate Video Code</label>
+                            <span class="col-md-8 col-lg-8" style="padding: 10px" id="videoCode"><span class="hint">Copy code from here</span></span>
+                    </div>
+                    <div class="row u-margin-top-tiny">
+                        <label for="givenContent">Write the content</label>
+                    </div>
+                    <div class="row u-margin-top-tiny">
+                        <input type="givenContent" name="newsContent" id="givenContent" placeholder="Write News Content" required value="{{old('givenContent')}}">
+                    </div>
+                    <div class="row u-margin-top-tiny">
+                        <label for="newsFiles">Others Images/Videos</label>
+                    </div>
+                    {{-- <div class="row u-margin-top-tiny">
+                        <input type="file" id="newsFiles" name="newsFiles[]" multiple="" />
+                    </div> --}}
+                    <div class="row u-margin-top-tiny">
+                        <input type="news_write" value="Write News" style="cursor: pointer;" class="newNews">
+                    </div>
+                </form>
+                
+                <script>
+                    var editor = new Jodit('#givenContent');
+                </script>
+            </div>
+            <div class="row">
+            	<form action="{{route('addFile')}}" method="POST" id="addFileForm" name="addFileForm" enctype="multipart/form-data" style="display: none;">
+            		@csrf
+            		<input type="file" class="hide addFile" name="addFile" >
+            		<input type="submit" class="hide submitAddFile" name="submitAddFile">
+				</form>
+            </div>
+        </main>
+        
+        <script src="https://cdn.ckeditor.com/ckeditor5/12.1.0/classic/ckeditor.js"></script>
+    </body>
+</html>
