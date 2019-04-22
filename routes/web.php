@@ -29,3 +29,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/addpost', 'HomeController@newPost')->name('newPost');
+
+Route::post('/home/addfile', 'newsController@addFile')->name('addFile');
+Route::post('/home/newNews', 'newsController@newNews')->name('newNews');
