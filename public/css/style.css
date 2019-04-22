@@ -103,6 +103,15 @@ body {
 .u-margin-top-big {
   margin-top: 8rem !important; }
 
+.u-margin-top-medium {
+  margin-top: 4rem !important; }
+
+.u-margin-top-small {
+  margin-top: 1.5rem !important; }
+
+.u-margin-top-tiny {
+  margin-top: .5rem !important; }
+
 .u-margin-top-huge {
   margin-top: 10rem !important; }
 
@@ -176,6 +185,9 @@ body {
     .services-box__text {
       display: inline; } }
 
+.btn--register {
+  color: aqua; }
+
 /* WATCH INTRO VIDEO */
 .intro-play-img {
   transform: translateY(0.8rem);
@@ -245,7 +257,7 @@ body {
       background-image: linear-gradient(to right bottom, rgba(216, 89, 183, 0.85), rgba(255, 21, 194, 0.85));
       margin-left: -2rem; }
   .card_login {
-    min-height: 40rem;
+    height: 40rem;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -255,6 +267,18 @@ body {
     border-radius: .5rem;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
     .card_login--front {
+      background-color: #FFFFFF; }
+  .card_register {
+    height: 60rem;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    width: 40%;
+    padding: 5rem 10rem;
+    border-radius: .5rem;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
+    .card_register--front {
       background-color: #FFFFFF; }
 
 .popup {
@@ -341,7 +365,8 @@ body {
     color: #000000; }
 
 .first-color-background {
-  background-image: linear-gradient(to right bottom, rgba(255, 173, 0, 0.6), rgba(28, 157, 252, 0.6)), url(../img/big_community.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 173, 0, 0.9), rgba(28, 157, 252, 0.9)), url(../img/recruitment.jpg);
+  background-size: cover;
   height: 50vh; }
   @media (max-width: 37.5em) {
     .first-color-background {
@@ -350,7 +375,8 @@ body {
       display: none; } }
 
 .second-color-background {
-  background-image: linear-gradient(to right bottom, rgba(255, 173, 0, 0.6), rgba(28, 157, 252, 0.6)), url(../img/joining_incubator.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 173, 0, 0.9), rgba(28, 157, 252, 0.9)), url(../img/training.jpg);
+  background-size: cover;
   height: 50vh; }
   @media (max-width: 37.5em) {
     .second-color-background {
@@ -359,7 +385,8 @@ body {
       display: none; } }
 
 .third-color-background {
-  background-image: linear-gradient(to right bottom, rgba(255, 173, 0, 0.6), rgba(28, 157, 252, 0.99)), url(../img/job_placement.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 173, 0, 0.9), rgba(28, 157, 252, 0.9)), url(../img/consulting.jpg);
+  background-size: cover;
   height: 50vh; }
   @media (max-width: 37.5em) {
     .third-color-background {
@@ -368,7 +395,8 @@ body {
       display: none; } }
 
 .forth-color-background {
-  background-image: linear-gradient(to right bottom, rgba(255, 173, 0, 0.6), rgba(28, 157, 252, 0.6)), url(../img/job_training.jpg);
+  background-image: linear-gradient(to right bottom, rgba(255, 173, 0, 0.9), rgba(28, 157, 252, 0.9)), url(../img/work-visa.jpg);
+  background-size: cover;
   height: 50vh; }
   @media (max-width: 37.5em) {
     .forth-color-background {
@@ -458,8 +486,20 @@ input[type=login] {
   padding: 1.2rem 2rem;
   background-color: #0FED9B;
   color: #FFFFFF;
-  margin-top: 5rem;
+  margin-top: 3rem;
   border-radius: .5rem;
+  text-align: center;
+  border: none; }
+
+input[type=news_write] {
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 1.2rem 2rem;
+  background-color: #0FED9B;
+  color: #FFFFFF;
+  margin-top: 3rem;
+  border-radius: .5rem;
+  width: 100%;
   text-align: center;
   border: none; }
 
@@ -1119,4 +1159,4 @@ textarea {
   margin-bottom: 10rem; }
 
 .center_vertical {
-margin-bottom: 2rem; }
+  margin-bottom: 2rem; }
