@@ -15,6 +15,12 @@ class newsController extends Controller
     	$this->isAlreadyLoggedIn();
     	return view('admin.addnews');
     }
+    
+    public function showHome()
+    {
+        $latestNews = newsModel::where('status', 'active')->skip(0)->take(3)->get();
+        return view('mainlayout.layout', compact('latestNews'));
+    }
     public function addFile(Request $formRequest)
     {
         $rules = [

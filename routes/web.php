@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@showHome');
+Route::get('/', 'newsController@showHome');
 
 Route::get('/about', function(){
 	return view('aboutpage.index');

@@ -30,9 +30,4 @@ class HomeController extends Controller
     {
         return view('admin.addnews');
     }
-    public function showHome()
-    {
-        $latestNews = newsModel::where('status', 'active')->skip(0)->take(3)->get();
-        return view('mainlayout.layout', compact('latestNews'));
-    }
 }
