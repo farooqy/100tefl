@@ -15,7 +15,7 @@ class newsController extends Controller
     	$this->isAlreadyLoggedIn();
     	return view('admin.addnews');
     }
-    
+
     public function showHome()
     {
         $latestNews = newsModel::where('status', 'active')->skip(0)->take(3)->get();
@@ -109,7 +109,7 @@ class newsController extends Controller
     	$filename = time().'_newsFeature_.'.$fextension;
     	if(env('APP_ENV') === 'production')
         {
-        	$featureImageUrl = env('APP_URL').'new100tefl/public/uploads/news/'.$filename;
+        	$featureImageUrl = env('APP_URL').'100tefl/public/uploads/news/'.$filename;
         }
         else
 	        $featureImageUrl = env('APP_URL').'uploads/news/'.$filename;
