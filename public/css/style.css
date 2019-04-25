@@ -966,52 +966,49 @@ textarea {
 
 .video {
   margin-bottom: 5rem; }
-
-.video_small--title {
-  color: #000000;
-  font-weight: 400;
-  margin: .5rem auto; }
-  @media (max-width: 37.5em) {
-    .video_small--title {
-      text-align: center; } }
-
-.video_small--1 video, .video_small--2 video {
-  vertical-align: bottom;
-  height: 14rem;
-  border-radius: .2rem; }
-
-@media (max-width: 37.5em) {
-  .video_big {
-    display: block;
-    width: 100%; } }
-
-.video_big--title {
-  color: #000000;
-  font-weight: 300;
-  margin-bottom: 2rem; }
-  @media (max-width: 37.5em) {
-    .video_big--title {
-      font-size: 1.5rem;
-      text-align: center;
-      margin: 1rem 0 1rem 0; } }
-
-.video_big--video {
-  background-image: url(../img/iPad_video_frame@2x.png);
-  background-size: cover;
-  height: 45.5rem; }
-  @media (max-width: 37.5em) {
-    .video_big--video {
-      height: 23.5rem; } }
-  .video_big--video video {
-    vertical-align: bottom;
-    margin: 9rem auto 0 4rem;
-    width: 87.8%;
-    height: 36.5rem;
-    border-radius: 1rem 1rem 0 0; }
+  .video_small--title {
+    color: #000000;
+    font-weight: 400;
+    margin: .5rem auto; }
     @media (max-width: 37.5em) {
-      .video_big--video video {
-        height: 18.5rem;
-        margin: 5rem auto 0 2.3rem; } }
+      .video_small--title {
+        text-align: center; } }
+  .video_small--1 video, .video_small--2 video {
+    vertical-align: bottom;
+    height: 14rem;
+    border-radius: .2rem; }
+  @media (max-width: 37.5em) {
+    .video_big {
+      display: block;
+      width: 100%; } }
+  .video_big--title {
+    color: #000000;
+    font-weight: 300;
+    margin-bottom: 2rem; }
+    @media (max-width: 37.5em) {
+      .video_big--title {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 1rem 0 1rem 0; } }
+  .video_big--video {
+    background-image: url(../img/iPad_video_frame@2x.png);
+    background-size: cover;
+    height: 45.5rem; }
+    @media (max-width: 37.5em) {
+      .video_big--video {
+        height: 23.5rem; } }
+    .video_big--video video {
+      vertical-align: bottom;
+      margin: 9rem auto 0 4rem;
+      width: 87.8%;
+      height: 36.5rem;
+      border-radius: 1rem 1rem 0 0; }
+      @media (max-width: 37.5em) {
+        .video_big--video video {
+          height: 18.5rem;
+          margin: 5rem auto 0 2.3rem; } }
+  .video_latest-news__description {
+    margin-top: 5rem; }
 
 .more_news {
   text-decoration: none;
