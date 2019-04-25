@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('mainlayout.layout');
-});
+Route::get('/', 'HomeController@showHome');
 
 Route::get('/about', function(){
 	return view('aboutpage.index');
@@ -32,3 +30,6 @@ Route::get('/home/addpost', 'HomeController@newPost')->name('newPost');
 
 Route::post('/home/addfile', 'newsController@addFile')->name('addFile');
 Route::post('/home/newNews', 'newsController@newNews')->name('newNews');
+
+Route::get('/news', 'newsController@showAllNews');
+Route::get('/news/{newsId}', 'newsController@getGivenNews');
