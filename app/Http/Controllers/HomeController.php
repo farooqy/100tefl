@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\models\newsModel;
 
 class HomeController extends Controller
 {
@@ -28,5 +29,10 @@ class HomeController extends Controller
     public function newPost()
     {
         return view('admin.addnews');
+    }
+    public function showHome()
+    {
+        $latestNews = newsModel::where('status', 'active')->skip(0)->take(3)->get();
+        return view('mainlayout.layout', compact('latestNews'));
     }
 }

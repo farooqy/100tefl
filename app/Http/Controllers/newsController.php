@@ -62,12 +62,16 @@ class newsController extends Controller
     public function showAllNews()
     {
         $newsList = newsModel::where('status', 'active')->orderBy('id', 'desc')->get();
-        return view('newspage.listNews', compact('newsList'));
+        return view('newsview.newsview', compact('newsList'));
     }
     public function getGivenNews($newsId)
     {
-        $givenNews = newsModel::where([['id', '=',$newsId], ['status', '=' ,'active']])->get()->all();
-        return view('newspage.listNews',compact('givenNews'));
+        $newsList = newsModel::where('status', 'active')->orderBy('id', 'desc')->get();
+        $givenNews = newsModel::where([['id', '=',$newsId], ['status', '=' ,'active']])->get();
+        $notfound = [];
+        if($givenNews === null || $givenNews->count() <= 0)
+            return view('newsview.newsview',compact('notfound', 'newsList'));
+        return view('newsview.newsview',compact('givenNews', 'newsList'));
     }
     public function newNews(Request $request)
     {
@@ -115,7 +119,11 @@ class newsController extends Controller
         else if(in_array($fextension, $fileTypes["video"]))
             $featureType = "video";
         else
-            $featureType = "unknown";
+        {
+            session()->flash('uploadFailed','Could not determine image/video extension '.$fextension);
+            $failed = true;
+            return view('admin.addnews');
+        }
         $newsModel = new newsModel;
         $newsModel->title = $request->newsTitle;
         $newsModel->feature_image = $featureImageUrl;
