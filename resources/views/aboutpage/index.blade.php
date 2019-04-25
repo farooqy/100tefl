@@ -10,10 +10,10 @@
         
         <title>About us | 100TEFL</title>
         
-        <link href="{{env('APP_URL')}}css/fonts_google.css?family=Lato:300,400,700" rel="stylesheet">
+        <link href="/css/fonts_google.css?family=Lato:300,400,700" rel="stylesheet">
         
-        <link rel="stylesheet" href="{{env('APP_URL')}}css/icon-font.css">
-        <link rel="stylesheet" href="{{env('APP_URL')}}css/style.css" type="text/css">
+        <link rel="stylesheet" href="/css/icon-font.css">
+        <link rel="stylesheet" href="/css/style.css" type="text/css">
         <link rel="shortcut icon" href="https://100tefl.com/images/favicon.ico" sizes="32x32" type="image/png" >
     </head>
     
@@ -21,7 +21,7 @@
         <header class="about_header" id="header">
             <nav class="row">
                 <div class="col-1-of-4 header__logo-box">
-                    <a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}img/logo.png" alt="logo" class="header__logo-img"></a>
+                    <a href="/"><img src="/img/logo.png" alt="logo" class="header__logo-img"></a>
                 </div>
                     
                 <label for="toggle" class="label">&#9776;</label>
@@ -29,12 +29,12 @@
                 
                 <div class="col-3-of-4-drop-down menu">
                     <ul class="about_header__black-nav">
-                        <li><a href="{{env('APP_URL')}}">Home</a></li>
-                        <li><a href="{{env('APP_URL')}}#section_news">News</a></li>
-                        <li><a href="{{env('APP_URL')}}services">Services</a></li>
-                        <li><a href="{{env('APP_URL')}}#section_contact">Contact</a></li>
-                        <li><a href="{{env('APP_URL')}}careers">100tefl VIP</a></li>
-                        <li><a href="" style="border-bottom: .1rem solid #fff;">About</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/news">News</a></li>
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/#section_contact">Contact</a></li>
+                        <li><a href="/careers">100tefl VIP</a></li>
+                        <li><a href="/about" style="border-bottom: .1rem solid #fff;">About</a></li>
                     </ul>
                 </div>
             </nav>
@@ -74,7 +74,7 @@
         <!-- FOOTER -->
         <footer class="footer" id="about_footer">
             <div class="footer__logo-box">
-                <a href="{{env('APP_URL')}}"><img src="{{env('APP_URL')}}img/logo.png" alt="Footer Logo" class="footer__logo"></a>
+                <a href="/"><img src="../img/logo.png" alt="Footer Logo" class="footer__logo"></a>
             </div>
             <div class="row">
                 <div class="col-1-of-2 footer-left">
@@ -88,11 +88,12 @@
                         <ul class="footer__list">
                             <p>Navigation</p>
 
-                            <li class="footer__item"><a href="{{env('APP_URL')}}" class="footer__link">Home</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}#section_news" class="footer__link">News</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}services" class="footer__link">Services</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}#section_contact" class="footer__link">Contact</a></li>
-                            <li class="footer__item"><a href="{{env('APP_URL')}}careers" class="footer__link">100tefl VIP</a></li>
+                            <li class="footer__item"><a href="/" class="footer__link">Home</a></li>
+                            <li class="footer__item"><a href="/#section_news" class="footer__link">News</a></li>
+                            <li class="footer__item"><a href="/services" class="footer__link">Services</a></li>
+                            <li class="footer__item"><a href="/#section_contact" class="footer__link">Contact</a></li>
+                            <li class="footer__item"><a href="/careers" class="footer__link">100tefl VIP</a></li>
+                            <li class="footer__item"><a href="/login" class="footer__link">Login</a></li>
 
                         </ul>
                         <ul class="footer__list">
@@ -104,7 +105,7 @@
                         <ul class="footer__list">
                             <p>Add us</p>
 
-                            <li class="footer__item"><a href="#about_footer" class="footer__link"><img src="{{env('APP_URL')}}img/wechat_color.png" alt="wechat" class="follow-img"><span>ybws100tefl</span></a></li>
+                            <li class="footer__item"><a href="#about_footer" class="footer__link"><img src="../img/wechat_color.png" alt="wechat" class="follow-img"><span>ybws100tefl</span></a></li>
                         </ul>
                     </div>
                 </div>

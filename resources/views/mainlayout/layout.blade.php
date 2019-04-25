@@ -32,10 +32,10 @@
                     <ul class="header__main-nav">
                         <li><a href="#header" onClick="toggleDropdown()">Home</a></li>
                         <li><a href="#section_news" onClick="toggleDropdown()">News</a></li>
-                        <li><a href="services" onClick="toggleDropdown()">Services</a></li>
+                        <li><a href="/services" onClick="toggleDropdown()">Services</a></li>
                         <li><a href="#section_contact" onClick="toggleDropdown()">Contact</a></li>
-                        <li><a href="careers" onClick="toggleDropdown()">100tefl VIP</a></li>
-                        <li><a href="about" onClick="toggleDropdown()">About</a></li>
+                        <li><a href="/careers" onClick="toggleDropdown()">100tefl VIP</a></li>
+                        <li><a href="/about" onClick="toggleDropdown()">About</a></li>
                     </ul>
                 </div>
             </nav>
@@ -67,6 +67,41 @@
                 </div>
                 
                 <div class="row video">
+                    @if(isset($latestNews) && $latestNews->count() > 0)
+
+                    <div class="col-1-of-3 res-full">
+                        <div class="video_small">
+                            <div class="video_small--1"> 
+                                <a href="/news/{{$latestNews[0]->id}}">
+                                    <h4 class="video_small--title">{{$latestNews[0]->title}}</h4>
+                                    @if($latestNews[0]->feature_image_type === "video")
+                                    <video src="{{$latestNews[0]->feature_image}}" controls="" type="video/mp4" width="100%" height="100%" />
+                                    @else
+                                    <img src="{{$latestNews[0]->feature_image}}" width="100%" height="100%" >
+                                    @endif
+                                </a>
+                            </div>
+                            <div class="video_small--2">
+                                <h4 class="video_small--title">我们致力于实现更多目标 &#45; Our dedication to achieving more</h4>
+                                
+                                <video src="vid/video_life-in-china.mp4" controls="" type="video/mp4" width="100%" height="50%" poster="img/video_thumb_our-dedication.png"/>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-2-of-3 res-full">
+                        <div class="video_big">
+                            <div>
+                                <h2 class="video_big--title">外国人在中国南京的看法<br>Views of foreigners in Nanjing China</h2>
+                            </div>
+                            <div class="video_big--video">
+                                <video src="vid/video_foreigners_big.mp4" controls="" type="video/mp4" width="100%" height="100%" poster="img/video_poster_big.jpg"></video>
+                            </div>
+                        </div>
+                    </div>
+                    @else
+
                     <div class="col-1-of-3 res-full">
                         <div class="video_small">
                             <div class="video_small--1"> 
@@ -91,10 +126,11 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                 </div>
                 
                 <div class="row u-center-text">
-                    <a href="#section_news" class="more_news">Read more latest news</a>
+                    <a href="/news" class="more_news">Read more latest news</a>
                 </div>
             </section>
             
@@ -120,32 +156,32 @@
                 <div class="big-row">
                     <div class="col-1-of-2">
                         <div class="services-box">
-                            <a href="services"><i class="services-box__icon icon-basic-todo-txt"></i></a>
+                            <a href="/services"><i class="services-box__icon icon-basic-todo-txt"></i></a>
                             <h3 class="heading-tertiary-white u-margin-bottom-small">招聘<br>Recruitment</h3>
-                            <a class="btn--services services-box__text" href="services">细节</a>
+                            <a class="btn--services services-box__text" href="/services">细节</a>
                         </div>
                     </div>
                     <div class="col-1-of-2">
                         <div class="services-box">
-                            <a href="services"><i class="services-box__icon icon-basic-signs"></i></a>
+                            <a href="/services"><i class="services-box__icon icon-basic-signs"></i></a>
                             <h3 class="heading-tertiary-white u-margin-bottom-small">训练<br>Training</h3>
-                            <a class="btn--services services-box__text" href="services">细节</a>
+                            <a class="btn--services services-box__text" href="/services">细节</a>
                         </div>
                     </div>
                 </div>
                 <div class="big-row">
                     <div class="col-1-of-2">
                         <div class="services-box">
-                            <a href="services"><i class="services-box__icon icon-basic-link"></i></a>
+                            <a href="/services"><i class="services-box__icon icon-basic-link"></i></a>
                             <h3 class="heading-tertiary-white u-margin-bottom-small">咨询<br>Consulting</h3>
-                            <a class="btn--services services-box__text" href="services">细节</a>
+                            <a class="btn--services services-box__text" href="/services">细节</a>
                         </div>
                     </div>
                     <div class="col-1-of-2">
                         <div class="services-box">
-                            <a href="services"><i class="services-box__icon icon-basic-world"></i></a>
+                            <a href="/services"><i class="services-box__icon icon-basic-world"></i></a>
                             <h3 class="heading-tertiary-white u-margin-bottom-small">工作签证<br>Work-Visa</h3>
-                            <a class="btn--services services-box__text" href="services">细节</a>
+                            <a class="btn--services services-box__text" href="/services">细节</a>
                         </div>
                     </div>
                 </div>
@@ -244,7 +280,7 @@
                 
                 <div class="row">
                     <div class="col-1-of-4 res-full">
-                        <a href="careers">
+                        <a href="/careers">
                             <div class="card">
                                 <div class="card__side card__side--front">
                                     <div class="card__picture card__picture--1">
@@ -258,7 +294,7 @@
                         </a>
                     </div>
                     <div class="col-1-of-4 res-full">
-                        <a href="careers">
+                        <a href="/careers">
                             <div class="card">
                                 <div class="card__side card__side--front">
                                     <div class="card__picture card__picture--2">
@@ -272,7 +308,7 @@
                         </a>
                     </div>
                     <div class="col-1-of-4 res-full">
-                        <a href="careers">
+                        <a href="/careers">
                             <div class="card">
                                 <div class="card__side card__side--front">
                                     <div class="card__picture card__picture--3">
@@ -286,7 +322,7 @@
                         </a>
                     </div>
                     <div class="col-1-of-4 res-full">
-                        <a href="careers">
+                        <a href="/careers">
                             <div class="card">
                                 <div class="card__side card__side--front">
                                     <div class="card__picture card__picture--4">
@@ -319,24 +355,24 @@
                     <div class="footer__navigation">
                         <ul class="footer__list">
                             <p>Navigation</p>
-                            
+
                             <li class="footer__item"><a href="#header" class="footer__link">Home</a></li>
                             <li class="footer__item"><a href="#section_news" class="footer__link">News</a></li>
-                            <li class="footer__item"><a href="services" class="footer__link">Services</a></li>
+                            <li class="footer__item"><a href="/services" class="footer__link">Services</a></li>
                             <li class="footer__item"><a href="#section_contact" class="footer__link">Contact</a></li>
-                            <li class="footer__item"><a href="careers" class="footer__link">100tefl VIP</a></li>
-                            <li class="footer__item"><a href="about" class="footer__link">About</a></li>
-                            <li class="footer__item"><a href="login" class="footer__link">Login</a></li>
+                            <li class="footer__item"><a href="/careers" class="footer__link">100tefl VIP</a></li>
+                            <li class="footer__item"><a href="/about" class="footer__link">About</a></li>
+                            <li class="footer__item"><a href="/login" class="footer__link">Login</a></li>
                         </ul>
                         <ul class="footer__list">
                             <p>Contact Us</p>
-                            
+
                             <li class="footer__item"><a href="mailto:service@100tefl.com" class="footer__link">service@100tefl.com</a></li>
                             <li class="footer__item"><a href="#footer" class="footer__link">+86 189 9405 0515</a></li>
                         </ul>
                         <ul class="footer__list">
                             <p>Add us</p>
-                            
+
                             <li class="footer__item"><a href="#footer" class="footer__link"><img src="img/wechat_color.png" alt="wechat" class="follow-img"><span>ybws100tefl</span></a></li>
                         </ul>
                     </div>

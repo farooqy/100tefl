@@ -30,7 +30,7 @@
                 <div class="col-3-of-4-drop-down menu">
                     <ul class="pages_header__black-nav">
                         <li><a href="/" onClick="toggleDropdown()">Home</a></li>
-                        <li><a href="/#section_news" onClick="toggleDropdown()">News</a></li>
+                        <li><a href="/news" onClick="toggleDropdown()">News</a></li>
                         <li><a href="/services" onClick="toggleDropdown()">Services</a></li>
                         <li><a href="/#section_contact" onClick="toggleDropdown()">Contact</a></li>
                         <li><a href="/#section_career-partners" onClick="toggleDropdown()">100tefl VIP</a></li>
@@ -51,14 +51,14 @@
                 </div>
                 <div class="col-1-of-3">
                     <div class="admin-box">
-                        <a href="home/addUser"><i class="admin-box__icon icon-basic-share"></i></a>
+                        <a href="#"><i class="admin-box__icon icon-basic-share"></i></a>
                         <h3 class="heading-tertiary u-margin-bottom-small">Add User</h3>
                         <a class="btn--services services-box__text" href="pages/services.html">细节</a>
                     </div>
                 </div>
                 <div class="col-1-of-3">
                     <div class="admin-box">
-                        <a href="/home/feedbacks"><i class="admin-box__icon icon-basic-info"></i></a>
+                        <a href="#"><i class="admin-box__icon icon-basic-info"></i></a>
                         <h3 class="heading-tertiary u-margin-bottom-small">View Feedback</h3>
                         <a class="btn--services services-box__text" href="pages/services.html">细节</a>
                     </div>

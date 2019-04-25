@@ -55,6 +55,11 @@
             <div class="row u-margin-top-huge u-margin-bottom-big">
                 <form method="post" action="{{route('newNews')}}" id="newNews" enctype="multipart/form-data">
                 	@csrf
+                    @if(session('uploadFailed'))
+                    <div class="row">
+                        <strong style="color: red">{{session('uploadFailed')}}</strong>
+                    </div>
+                    @endif
                 	@if($errors->any())
                 	@foreach($errors->all() as $error)
                 	<div class="row">
