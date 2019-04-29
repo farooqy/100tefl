@@ -27,9 +27,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/addpost', 'HomeController@newPost')->name('newPost');
+Route::get('/home/news', 'HomeController@getNews')->name('getNews');
+Route::get('/home/news/deletenews/{newsId}', 'newsController@deleteNews')->name('deleteNews');
 
 Route::post('/home/addfile', 'newsController@addFile')->name('addFile');
 Route::post('/home/newNews', 'newsController@newNews')->name('newNews');
 
-Route::get('/news', 'newsController@showAllNews');
+Route::get('/news', 'newsController@showAllNews')->name('allNews');
 Route::get('/news/{newsId}', 'newsController@getGivenNews');

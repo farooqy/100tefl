@@ -64,6 +64,18 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="row u-margin-top-big u-margin-bottom-big">
+                <div class="col-1-of-3 admin-box--card">
+                    <div class="admin-box">
+                        <a href="/home/news"><i class="admin-box__icon icon-basic-pin2"></i></a>
+                        <h3 class="heading-tertiary u-margin-bottom-small">Edit News</h3>
+                        <a class="btn--services services-box__text" href="pages/services.html">细节</a>
+                    </div>
+                </div>
+            </div>
+
         </main>
     </body>
 </html>
