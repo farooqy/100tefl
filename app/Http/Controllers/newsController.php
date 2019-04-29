@@ -145,7 +145,7 @@ class newsController extends Controller
         }
         catch(\Illuminate\Database\QueryException $exception)
         {
-            session()->flash('uploadFailed','Query Error: Failed to save news to database');
+            session()->flash('uploadFailed', $exception->errorInfo);
             $failed = true;
             return view('admin.addnews');
 
