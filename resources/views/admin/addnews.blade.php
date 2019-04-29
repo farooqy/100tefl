@@ -59,8 +59,10 @@
                     <div class="row">
                         @if(is_array(session('uploadFailed')))
                         <strong style="color: red">@php print_r(session('uploadFailed')) @endphp</strong>
-                        @endif
+                        @else
                         <strong style="color: red">{{session('uploadFailed')}}</strong>
+                        @endif
+                        
                     </div>
                     @endif
                 	@if($errors->any())
