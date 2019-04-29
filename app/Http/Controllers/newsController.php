@@ -153,7 +153,7 @@ class newsController extends Controller
         catch(Exception $exception)
         {
 
-            session()->flash('uploadFailed','Error Exception:  '.$fextension);
+            session()->flash('uploadFailed','Error Exception:  '.$exception->errorInfo);
             $failed = true;
             return view('admin.addnews');
         }
