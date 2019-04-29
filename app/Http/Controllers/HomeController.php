@@ -30,4 +30,9 @@ class HomeController extends Controller
     {
         return view('admin.addnews');
     }
+    public function getNews()
+    {
+        $newsList = newsModel::where('status', 'active')->get();
+        return view('admin.newsview', compact('newsList'));
+    }
 }

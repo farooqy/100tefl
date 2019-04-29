@@ -89,7 +89,7 @@ class newsController extends Controller
         ];
     	$request->validate([
     		"newsTitle" => ["required", 'min:10', 'max:200'],
-    		"newsFeatureImage" => ['required','image','mimes:jpg,jpeg,png,avi,web,mp4,PNG', 'max:200000'],
+    		"newsFeatureImage" => ['required','mimes:jpg,jpeg,png,avi,web,mp4,PNG', 'max:200000'],
     		'newsContent' =>  ['required', 'min:100'],
     		"newsFiles" => ['max:200000']
     	]);
@@ -130,15 +130,34 @@ class newsController extends Controller
             $failed = true;
             return view('admin.addnews');
         }
-        $newsModel = new newsModel;
-        $newsModel->title = $request->newsTitle;
-        $newsModel->feature_image = $featureImageUrl;
-        $newsModel->content = $request->newsContent;
-        $newsModel->feature_image_type = $featureType;
-        $newsModel->save();
-        if($failed === false)
-            session()->flash('success',true);
-        return view('admin.addnews');
+        try
+        {
+            $newsModel = new newsModel;
+            $newsModel->title = $request->newsTitle;
+            $newsModel->feature_image = $featureImageUrl;
+            $newsModel->content = $request->newsContent;
+            $newsModel->feature_image_type = $featureType;
+            $newsModel->save();
+
+            $newsId = $newsModel::where([['title', $request->newsTitle],['feature_image', $featureImageUrl]])->get();
+
+            return redirect()->route('allNews', $newsId[0]->id)->send();
+        }
+        catch(\Illuminate\Database\QueryException $exception)
+        {
+            session()->flash('uploadFailed','Query Error: Failed to save news to database'.$exception->errorInfo);
+            $failed = true;
+            return view('admin.addnews');
+
+        }
+        catch(Exception $exception)
+        {
+
+            session()->flash('uploadFailed','Error Exception:  '.$fextension);
+            $failed = true;
+            return view('admin.addnews');
+        }
+            
     }
     public function newYearParty()
     {
@@ -194,7 +213,7 @@ class newsController extends Controller
         {
         	session()->flash('uploadFailed','The news you are trying to update is not available');
 	        $failed = true;
-	        return view('newspage.notfound');
+	        return view('newsview.notfound');
         }
 	    if($request->file('newsFeatureImage'))
 	    {
@@ -254,19 +273,19 @@ class newsController extends Controller
     	$newsGiven = newsModel::where('id', $newsId)->get();
     	if($newsGiven == null || count($newsGiven) <= 0)
     	{
-    		return view('newspage.notfound');
+    		return view('newsview.notfound');
     	}
     	else
     	{
     		try
 	        {
 	        	newsModel::where('id', $newsId)->update(['status'=> 'inactive']);
+                return redirect()->route('allNews')->send();
 	        }
 	        catch(\Illuminate\Database\QueryException $e)
 	        {
 	        	return view('errors.500');
 	        }
-	        return 'wagwan';
     	}
     }
 }
