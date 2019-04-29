@@ -91,7 +91,6 @@
                         <input type="givenContent" name="newsContent" id="givenContent" placeholder="Write News Content" required value="{{old('givenContent')}}">
                     </div>
                     <div class="row u-margin-top-tiny">
-                        <label for="newsFiles">Others Images/Videos</label>
                     </div>
                     {{-- <div class="row u-margin-top-tiny">
                         <input type="file" id="newsFiles" name="newsFiles[]" multiple="" />
