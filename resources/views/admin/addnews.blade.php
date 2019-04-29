@@ -57,6 +57,9 @@
                 	@csrf
                     @if(session('uploadFailed'))
                     <div class="row">
+                        @if(is_array(session('uploadFailed')))
+                        <strong style="color: red">@php print_r(session('uploadFailed')) @endphp</strong>
+                        @endif
                         <strong style="color: red">{{session('uploadFailed')}}</strong>
                     </div>
                     @endif
